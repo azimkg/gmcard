@@ -1,0 +1,766 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main_select {
+    -webkit-appearance: none !important;
+    /* скрываем стандартную стрелку */
+    appearance: none !important;
+    background: none !important;
+}
+
+.body {
+    background: linear-gradient(90.0deg, #152041 -12%, #077db9 62%, #077db9 37%, #152041 112%) !important;
+}
+
+::-webkit-scrollbar {
+    width: 2px !important;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7f8588;
+    border-radius: 10px;
+}
+
+.sub-class {
+    color: #077db9;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sub-class span {
+    color: #7f8588;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.dropdown-li {
+    color: #077db9;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dropdown-li span {
+    color: #7f8588;
+    font-size: 12px;
+    font-weight: bold;
+    position: static;
+}
+
+.dropdown-menu {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.dropdown-btn {
+    color: #077db9;
+}
+
+
+.my-class {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 1px solid rgb(218, 214, 214);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+.my-class span {
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.my-class:hover span {
+    color: #CBCE3D;
+}
+
+.my-class:hover #lists2 {
+    display: block;
+}
+
+.my-class:hover #lists3 {
+    display: block;
+}
+
+.my-class:hover {
+    background-color: #29ACEF;
+    color: white;
+}
+
+.my-class:focus-within {
+    background-color: #29ACEF;
+    color: white;
+}
+
+.strelka {
+    font-size: 8px !important;
+    width: 2px !important;
+}
+
+.active {
+    background-color: #29ACEF !important;
+    color: white !important;
+}
+
+.mains:hover .drop_list {
+    display: flex;
+}
+
+.mains2:hover .drop_list {
+    display: flex;
+}
+
+.mains3:hover .drop_list {
+    display: flex;
+}
+
+.mains4:hover .drop_list {
+    display: flex;
+}
+
+.mains5:hover .drop_list {
+    display: flex;
+}
+
+.mains6:hover .drop_list {
+    display: flex;
+}
+
+.mains7:hover .drop_list {
+    display: flex;
+}
+
+.mains8:hover .drop_list {
+    display: flex;
+}
+
+.mains12:hover .drop_list {
+    display: flex;
+}
+
+.mains9:hover .drop_list {
+    display: flex;
+}
+
+.mains10:hover .drop_list {
+    display: flex;
+}
+
+.mains11:hover .drop_list {
+    display: flex;
+}
+
+.drop_list:hover {
+    display: flex;
+}
+
+/* icons hover */
+.mains:hover #icons1 {
+    display: block;
+}
+
+.mains2:hover #icons2 {
+    display: block;
+}
+
+.mains3:hover #icons3 {
+    display: block;
+}
+
+.mains4:hover #icons3 {
+    display: block;
+}
+
+.mains5:hover #icons3 {
+    display: block;
+}
+
+.mains6:hover #icons3 {
+    display: block;
+}
+
+.mains7:hover #icons3 {
+    display: block;
+}
+
+.mains8:hover #icons3 {
+    display: block;
+}
+
+.mains9:hover #icons3 {
+    display: block;
+}
+
+.mains10:hover #icons3 {
+    display: block;
+}
+
+.mains11:hover #icons3 {
+    display: block;
+}
+
+.mains12:hover #icons3 {
+    display: block;
+}
+
+
+/* background image */
+.image-1 {
+    background-image: url(/assets/12icons/man.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains:hover .image-1 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-2 {
+    background-image: url(/assets/12icons/woman.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains2:hover .image-2 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-3 {
+    background-image: url(/assets/12icons/kid.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains3:hover .image-3 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-4 {
+    background-image: url(/assets/12icons/sofa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains4:hover .image-4 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-5 {
+    background-image: url(/assets/12icons/game.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains5:hover .image-5 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-6 {
+    background-image: url(/assets/12icons/strong.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains6:hover .image-6 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-7 {
+    background-image: url(/assets/12icons/work.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains7:hover .image-7 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-8 {
+    background-image: url(/assets/12icons/plane.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains8:hover .image-8 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-9 {
+    background-image: url(/assets/12icons/cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains9:hover .image-9 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-10 {
+    background-image: url(/assets/12icons/shop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains10:hover .image-10 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-11 {
+    background-image: url(/assets/12icons/car.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains11:hover .image-11 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.image-12 {
+    background-image: url(/assets/12icons/edu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.3
+}
+
+.mains12:hover .image-12 {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+}
+
+.modal_acc {
+    position: absolute !important;
+    transform: none !important;
+    top: 70px !important;
+    right: 0 !important;
+    box-shadow: none !important;
+}
+
+.hand {
+    animation-name: spin-top;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin-top {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+
+    25% {
+        transform: rotate(5deg);
+        transform-origin: bottom;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+
+    75% {
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+}
+
+@media (max-width:1024px) {
+    .skidki {
+        font-size: 20px !important;
+
+    }
+
+    .gapper {
+        gap: 4px !important;
+    }
+
+    .div_verh {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .text_large {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width:940px) {
+    .nijniy_block {
+        right: 250px;
+        bottom: 28px !important;
+    }
+
+    .verhniy_block {
+        right: 155px !important;
+    }
+
+    .banner_all {
+        height: 340px !important;
+    }
+
+    .hand {
+        display: none !important;
+    }
+
+    .list_footer {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:850px) {
+    .nijniy_block {
+        right: 220px;
+    }
+
+    .verhniy_block {
+        right: 135px !important;
+    }
+
+    .span_text {
+        font-size: 14px;
+    }
+
+    .span_text-1 {
+        font-size: 16px !important;
+    }
+
+    .banner_all {
+        height: 320px !important;
+    }
+
+    .text_filter {
+        display: none;
+    }
+}
+
+@media(max-width:767px) {
+    .pay_block {
+        display: none !important;
+    }
+
+    .mobile_desctop {
+        display: none !important;
+    }
+
+    .mobile_scroll {
+        display: flex !important;
+        overflow-x: scroll;
+    }
+
+    .mobile_scroll::-webkit-scrollbar {
+        height: 0px !important;
+        display: none !important;
+    }
+
+
+    .block_under {
+        display: block !important;
+    }
+
+    .banner_one {
+        display: none !important;
+    }
+}
+
+@media(max-width:752px) {
+    .main_card {
+        width: 330px !important;
+    }
+}
+
+@media(max-width:752px) {
+    .main_card {
+        width: 300px !important;
+    }
+}
+
+@media(max-width:648px) {
+    .main_card {
+        width: 260px !important;
+    }
+
+    .footer_navBlock {
+        /* justify-content: center !important; */
+    }
+
+    .footer_navBlock li {
+        margin-right: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .partner_link {
+        display: none !important;
+    }
+
+    .filter_block {
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+    }
+
+    .filter_block {
+        width: 100%;
+    }
+
+    .custom-select {
+        width: 100% !important;
+    }
+
+    #custom_select {
+        width: 100%;
+    }
+
+    .selected_block {
+        width: 100% !important;
+    }
+
+    .gapper {
+        width: 100%;
+    }
+
+    .custom-options {
+        width: 100%;
+    }
+
+    .custom-options_1 {
+        width: 100%;
+    }
+
+    .custom-options_2 {
+        width: 100%;
+    }
+
+    .custom_selected {
+        width: 100%;
+    }
+
+    .discount_ofBanner {
+        width: 50px;
+    }
+}
+
+@media(max-width:568px) {
+    .main_card {
+        width: 240px !important;
+    }
+
+    .kupon {
+        flex-direction: column;
+    }
+
+    .card_promo {
+        height: 440px !important;
+    }
+
+}
+
+@media(max-width:529px) {
+    .main_card {
+        width: 220px !important;
+    }
+
+    .down_block {
+        height: 170px !important;
+    }
+
+    .footer_block {
+        flex-direction: column !important;
+    }
+
+    .footer_upBlock {
+        width: 100%;
+    }
+
+    .upBlock_phones {
+        width: 100%;
+        flex-direction: initial !important;
+        margin-bottom: 14px;
+    }
+
+    .footer_downBlock {
+        margin: 0 !important;
+    }
+
+    .politic {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .discount_ofBanner {
+        display: none;
+    }
+
+    .discount_ofBanner1 {
+        width: 80px !important;
+        display: block !important;
+    }
+
+    .span_like {
+        display: none !important;
+    }
+
+    .btn_info {
+        display: none !important;
+    }
+
+    .verhniy_block {
+        right: 10px !important;
+        left: 30px;
+    }
+
+    .span_text {
+        font-size: 12px !important;
+    }
+
+    .span_text-1 {
+        font-size: 14px !important;
+    }
+
+    .text_large {
+        font-size: 20px !important;
+        font-weight: bold;
+
+    }
+
+    .nijniy_block {
+        right: inherit !important;
+        left: 20px
+    }
+
+    .icons_block {
+        margin-right: 2px !important;
+        margin-left: 2px !important;
+        min-width: 100px !important;
+    }
+}
+
+@media(max-width:488px) {
+    .main_card {
+        width: 200px !important;
+    }
+}
+
+@media(max-width:448px) {
+    .main_card {
+        width: 100% !important;
+    }
+
+    .down_block {
+        height: 136px !important;
+    }
+
+    .card_promo {
+        min-height: 423px !important;
+        height: 423px !important;
+    }
+
+    .discount_ofBanner1 {
+        width: 60px !important
+    }
+}
+
+/* анимация меню */
+.animated-block {
+
+    position: relative;
+    animation: slide-down 1s ease-out forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
