@@ -22,6 +22,7 @@ const activeImg9 = document.querySelector(".image-9")
 const activeImg10 = document.querySelector(".image-10")
 const activeImg11 = document.querySelector(".image-11")
 const activeImg12 = document.querySelector(".image-12")
+const topBar = document.querySelector("#topBar")
 
 
 const lists = document.querySelector('#lists')
@@ -970,6 +971,46 @@ dropdown.addEventListener('mouseleave', () => {
     activeImg12.classList.add("image-12")
 }
 )
+
+topBar.addEventListener("mouseenter", () => {
+    dropdown.classList.add('hidden');
+    arrow.classList.add('hidden');
+    arrow1.classList.add('hidden');
+    arrow2.classList.add('hidden');
+    arrow4.classList.add('hidden');
+    arrow5.classList.add('hidden');
+    arrow6.classList.add('hidden');
+    arrow7.classList.add('hidden');
+    arrow8.classList.add('hidden');
+    arrow9.classList.add('hidden');
+    arrow10.classList.add('hidden');
+    arrow11.classList.add('hidden');
+    arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.remove('activeImage2')
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.remove('activeImage3')
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.remove('activeImage4')
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.remove('activeImage5')
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.remove('activeImage6')
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.remove('activeImage7')
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.remove('activeImage8')
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.remove('activeImage9')
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.remove('activeImage10')
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.remove('activeImage11')
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.remove('activeImage12')
+    activeImg12.classList.add("image-12")
+})
 
 // OPEn mobile menu
 open_menu.addEventListener("click", () => {
