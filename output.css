@@ -2963,6 +2963,15 @@ a {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\]:hover {
+  color: ;
+}
+
+.hover\:text-\[\#983301\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(152 51 1 / var(--tw-text-opacity));
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -3055,6 +3064,15 @@ a {
 .group:hover .group-hover\:bg-\[\#F9D914\] {
   --tw-bg-opacity: 1;
   background-color: rgb(249 217 20 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:stroke-\[\#983301\] {
+  stroke: #983301;
+}
+
+.group:hover .group-hover\:text-\[\#983301\] {
+  --tw-text-opacity: 1;
+  color: rgb(152 51 1 / var(--tw-text-opacity));
 }
 
 .group:focus .group-focus\:outline-none {
