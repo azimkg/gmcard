@@ -10,6 +10,20 @@ const block9 = document.querySelector('.mains9');
 const block10 = document.querySelector('.mains10');
 const block11 = document.querySelector('.mains11');
 const block12 = document.querySelector('.mains12');
+const activeImg = document.querySelector(".image-1")
+const activeImg2 = document.querySelector(".image-2")
+const activeImg3 = document.querySelector(".image-3")
+const activeImg4 = document.querySelector(".image-4")
+const activeImg5 = document.querySelector(".image-5")
+const activeImg6 = document.querySelector(".image-6")
+const activeImg7 = document.querySelector(".image-7")
+const activeImg8 = document.querySelector(".image-8")
+const activeImg9 = document.querySelector(".image-9")
+const activeImg10 = document.querySelector(".image-10")
+const activeImg11 = document.querySelector(".image-11")
+const activeImg12 = document.querySelector(".image-12")
+
+
 const lists = document.querySelector('#lists')
 const lists2 = document.querySelector('#lists2')
 const lists3 = document.querySelector('#lists3')
@@ -433,6 +447,30 @@ block.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.add('activeImage')
+    activeImg.classList.remove("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 2
@@ -450,7 +488,30 @@ block2.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
-
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.remove("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.add('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 3
@@ -468,6 +529,30 @@ block3.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.remove("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.add('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 ;
 // 4
@@ -485,6 +570,30 @@ block4.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.remove("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.add('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 5
@@ -502,6 +611,30 @@ block5.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.remove("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.add('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 6
@@ -519,6 +652,30 @@ block6.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.remove("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.add('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 7
@@ -536,6 +693,30 @@ block7.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.remove("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.add('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 8
@@ -553,6 +734,30 @@ block8.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.remove("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.add('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 9
@@ -570,6 +775,30 @@ block9.addEventListener('mouseenter', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.remove("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.add('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 10
@@ -587,6 +816,30 @@ block10.addEventListener('mouseenter', () => {
     arrow9.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.remove("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.add('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 11
@@ -604,6 +857,30 @@ block11.addEventListener('mouseenter', () => {
     arrow9.classList.add('hidden');
     arrow10.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.remove("image-11")
+    activeImg12.classList.add("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.add('activeImage11')
+    activeImg12.classList.remove('activeImage12')
 });
 
 // 12
@@ -621,6 +898,30 @@ block12.addEventListener('mouseenter', () => {
     arrow9.classList.add('hidden');
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.remove("image-12")
+    activeImg2.classList.remove('activeImage2')
+    activeImg3.classList.remove('activeImage3')
+    activeImg4.classList.remove('activeImage4')
+    activeImg5.classList.remove('activeImage5')
+    activeImg6.classList.remove('activeImage6')
+    activeImg7.classList.remove('activeImage7')
+    activeImg8.classList.remove('activeImage8')
+    activeImg9.classList.remove('activeImage9')
+    activeImg10.classList.remove('activeImage10')
+    activeImg11.classList.remove('activeImage11')
+    activeImg12.classList.add('activeImage12')
 });
 
 
@@ -643,6 +944,30 @@ dropdown.addEventListener('mouseleave', () => {
     arrow10.classList.add('hidden');
     arrow11.classList.add('hidden');
     arrow12.classList.add('hidden');
+    activeImg.classList.remove('activeImage')
+    activeImg.classList.add("image-1")
+    activeImg2.classList.remove('activeImage2')
+    activeImg2.classList.add("image-2")
+    activeImg3.classList.remove('activeImage3')
+    activeImg3.classList.add("image-3")
+    activeImg4.classList.remove('activeImage4')
+    activeImg4.classList.add("image-4")
+    activeImg5.classList.remove('activeImage5')
+    activeImg5.classList.add("image-5")
+    activeImg6.classList.remove('activeImage6')
+    activeImg6.classList.add("image-6")
+    activeImg7.classList.remove('activeImage7')
+    activeImg7.classList.add("image-7")
+    activeImg8.classList.remove('activeImage8')
+    activeImg8.classList.add("image-8")
+    activeImg9.classList.remove('activeImage9')
+    activeImg9.classList.add("image-9")
+    activeImg10.classList.remove('activeImage10')
+    activeImg10.classList.add("image-10")
+    activeImg11.classList.remove('activeImage11')
+    activeImg11.classList.add("image-11")
+    activeImg12.classList.remove('activeImage12')
+    activeImg12.classList.add("image-12")
 }
 )
 

@@ -254,6 +254,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage {
+    background-image: url(/assets/12icons/man.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-2 {
     background-image: url(/assets/12icons/woman.png);
     background-repeat: no-repeat;
@@ -266,6 +273,13 @@ a {
 .mains2:hover .image-2 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage2 {
+    background-image: url(/assets/12icons/woman.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .image-3 {
@@ -282,6 +296,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage3 {
+    background-image: url(/assets/12icons/kid.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-4 {
     background-image: url(/assets/12icons/sofa.png);
     background-repeat: no-repeat;
@@ -294,6 +315,13 @@ a {
 .mains4:hover .image-4 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage4 {
+    background-image: url(/assets/12icons/sofa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .image-5 {
@@ -310,6 +338,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage5 {
+    background-image: url(/assets/12icons/game.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-6 {
     background-image: url(/assets/12icons/strong.png);
     background-repeat: no-repeat;
@@ -322,6 +357,13 @@ a {
 .mains6:hover .image-6 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage6 {
+    background-image: url(/assets/12icons/strong.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .image-7 {
@@ -338,6 +380,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage7 {
+    background-image: url(/assets/12icons/work.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-8 {
     background-image: url(/assets/12icons/plane.png);
     background-repeat: no-repeat;
@@ -350,6 +399,13 @@ a {
 .mains8:hover .image-8 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage8 {
+    background-image: url(/assets/12icons/plane.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .image-9 {
@@ -366,6 +422,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage9 {
+    background-image: url(/assets/12icons/cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-10 {
     background-image: url(/assets/12icons/shop.png);
     background-repeat: no-repeat;
@@ -378,6 +441,13 @@ a {
 .mains10:hover .image-10 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage10 {
+    background-image: url(/assets/12icons/shop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .image-11 {
@@ -394,6 +464,13 @@ a {
     filter: brightness(1) invert(0);
 }
 
+.activeImage11 {
+    background-image: url(/assets/12icons/car.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .image-12 {
     background-image: url(/assets/12icons/edu.png);
     background-repeat: no-repeat;
@@ -406,6 +483,13 @@ a {
 .mains12:hover .image-12 {
     opacity: 1;
     filter: brightness(1) invert(0);
+}
+
+.activeImage12 {
+    background-image: url(/assets/12icons/edu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .modal_acc {
