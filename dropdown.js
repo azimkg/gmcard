@@ -93,6 +93,37 @@ const open_menuList = document.querySelector(".animated-block")
 
 const open_menu = document.querySelector("#open_menu")
 
+
+// authorization dropdown
+
+const userAuth1 = document.querySelector("#userAuth1")
+const userAuth2 = document.querySelector("#userAuth2")
+const btnLink1 = document.querySelector("#startBTN")
+const btnLink2 = document.querySelector("#loginBTN")
+const authDropDown = document.querySelector("#userDropdown")
+const closeDrop = document.querySelector("#closeDrop")
+
+userAuth1.addEventListener("click", () => {
+    btnLink1.classList.remove("hidden")
+    authDropDown.classList.remove("hidden")
+    btnLink2.classList.add("hidden")
+
+})
+
+userAuth2.addEventListener("click", () => {
+    btnLink2.classList.remove("hidden")
+    authDropDown.classList.remove("hidden")
+    btnLink1.classList.add("hidden")
+})
+
+closeDrop.addEventListener('click', () => {
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
+    authDropDown.classList.add("hidden")
+})
+
+
+
 // array
 const category = [
     "Грузоперевозки",
