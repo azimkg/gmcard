@@ -102,6 +102,9 @@ const btnLink1 = document.querySelector("#startBTN")
 const btnLink2 = document.querySelector("#loginBTN")
 const authDropDown = document.querySelector("#userDropdown")
 const closeDrop = document.querySelector("#closeDrop")
+const section = document.querySelector("#section-1")
+const topbar = document.querySelector("#topBar")
+const header = document.querySelector("#header")
 
 userAuth1.addEventListener("click", () => {
     btnLink1.classList.remove("hidden")
@@ -121,6 +124,24 @@ closeDrop.addEventListener('click', () => {
     btnLink2.classList.add("hidden")
     authDropDown.classList.add("hidden")
 })
+
+window.addEventListener("click", (event) => {
+    if (event.target == section) {
+        authDropDown.classList.add("hidden");
+        btnLink1.classList.add("hidden")
+        btnLink2.classList.add("hidden")
+    }
+    if (event.target == topbar) {
+        authDropDown.classList.add("hidden");
+        btnLink1.classList.add("hidden")
+        btnLink2.classList.add("hidden")
+    }
+    if (event.target == header) {
+        authDropDown.classList.add("hidden");
+        btnLink1.classList.add("hidden")
+        btnLink2.classList.add("hidden")
+    }
+});
 
 
 
@@ -503,6 +524,9 @@ block.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 2
@@ -544,6 +568,9 @@ block2.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 3
@@ -585,6 +612,9 @@ block3.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 ;
 // 4
@@ -626,6 +656,9 @@ block4.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 5
@@ -667,6 +700,9 @@ block5.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 6
@@ -708,6 +744,9 @@ block6.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 7
@@ -749,6 +788,9 @@ block7.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 8
@@ -790,6 +832,9 @@ block8.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 9
@@ -831,6 +876,9 @@ block9.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 10
@@ -872,6 +920,9 @@ block10.addEventListener('mouseenter', () => {
     activeImg10.classList.add('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 11
@@ -913,6 +964,9 @@ block11.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.add('activeImage11')
     activeImg12.classList.remove('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 // 12
@@ -954,6 +1008,9 @@ block12.addEventListener('mouseenter', () => {
     activeImg10.classList.remove('activeImage10')
     activeImg11.classList.remove('activeImage11')
     activeImg12.classList.add('activeImage12')
+    authDropDown.classList.add("hidden");
+    btnLink1.classList.add("hidden")
+    btnLink2.classList.add("hidden")
 });
 
 
