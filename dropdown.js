@@ -98,10 +98,14 @@ const open_menu = document.querySelector("#open_menu")
 
 const userAuth1 = document.querySelector("#userAuth1")
 const userAuth2 = document.querySelector("#userAuth2")
+const userAuth3 = document.querySelector("#userAuth3")
 const btnLink1 = document.querySelector("#startBTN")
 const btnLink2 = document.querySelector("#loginBTN")
+const btnLink3 = document.querySelector("#mobileBTN")
 const authDropDown = document.querySelector("#userDropdown")
+const authDropDownMob = document.querySelector("#userDropdownMobile")
 const closeDrop = document.querySelector("#closeDrop")
+const closeMobDrop = document.querySelector("#closeDropMob")
 const section = document.querySelector("#section-1")
 const topbar = document.querySelector("#topBar")
 const header = document.querySelector("#header")
@@ -119,10 +123,26 @@ userAuth2.addEventListener("click", () => {
     btnLink1.classList.add("hidden")
 })
 
+userAuth3.addEventListener("click", () => {
+    btnLink3.classList.remove("hidden")
+    authDropDownMob.classList.remove("hidden")
+    authDropDownMob.classList.add("flex")
+})
+
+closeMobDrop.addEventListener('click', () => {
+    btnLink3.classList.add("hidden")
+    authDropDownMob.classList.add("hidden")
+    authDropDownMob.classList.remove("flex")
+})
+
+
 closeDrop.addEventListener('click', () => {
     btnLink1.classList.add("hidden")
     btnLink2.classList.add("hidden")
+    btnLink3.classList.add("hidden")
     authDropDown.classList.add("hidden")
+    authDropDownMob.classList.add("hidden")
+    authDropDownMob.classList.remove("flex")
 })
 
 window.addEventListener("click", (event) => {
@@ -1104,3 +1124,10 @@ topBar.addEventListener("mouseenter", () => {
 open_menu.addEventListener("click", () => {
     open_menuList.classList.toggle('hidden');
 })
+
+
+// swiper
+
+let Swipes = new Swiper('.swiper-container', {
+    loop: true,
+});
