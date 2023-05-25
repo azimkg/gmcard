@@ -13,8 +13,8 @@
 <body>
     <section class="w-full h-full flex items-center justify-center pt-10 pb-14">
         <div class="w-[500px] flex items-center flex-col justify-center">
-        <a href="/index.html"><img src="/assets/icons/gm-logo-2.png" alt="Логотип" class="w-16 h-16"></a>
-        <h1 class="text-[32px] font-bold w-[550px] text-center lett mt-10 tracking-tighter leading-tight text-black">Зарегистрируйтесь и подключитесь к системе</h1>
+        <a href="/index.html"><img src="/assets/cosial/logo.svg" alt="Логотип" class="w-10 h-10"></a>
+        <h1 class="text-[32px] font-bold w-[550px] text-center lett mt-5 tracking-tighter leading-tight text-black">Зарегистрируйтесь и подключитесь к системе</h1>
         <div class="flex flex-col items-center mt-5">
             <h4 class="text-lg font-bold">Зарегистрироваться через</h4>
             <ul class="flex items-center mt-5 gap-8">
@@ -31,25 +31,81 @@
         </div>
         <form class="flex items-center flex-col w-[500px] px-4">
             <h2 class="text-lg font-bold">Укажите электронную почту и пароль</h2>
-            <div class="flex flex-col w-full mt-5">
+            <div class="flex flex-col w-full mt-5 relative">
                 <label for="name" class="text-sm font-semibold mb-2">Ваше имя</label>
                 <input type="text" placeholder="Ваше имя" name="name" class="border border-black/40 p-3 w-full rounded-md">
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
             </div>
-            <div class="flex flex-col w-full mt-5">
+            <div class="flex flex-col w-full mt-5 relative">
                 <label for="sureName" class="text-sm font-semibold mb-2">Ваша фамилия</label>
-                <input type="text" placeholder="Ваша фамилия" name="sureName" class="border border-black/40 p-3 w-full rounded-md">
+                <input type="text" placeholder="Ваша фамилия" name="sureName" class="border border-black/40 py-3 px-4 w-full rounded-md">
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
             </div>
-            <div class="flex flex-col w-full mt-5">
+            <div class="flex w-full flex-col mt-5 relative">
+                <p class="text-sm font-semibold mb-2">Ваша дата рождения</p>
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
+                <div class="flex justify-between">
+                    <div class="w-[60px] flex flex-col">
+                        <label for="day" class="text-sm font-medium mb-2">День</label>
+                        <input type="text" name="day" maxlength="2" placeholder="ДД" class="w-full border border-black/40 rounded-md py-3 px-4 font-medium">
+                    </div>
+                    <div class="w-[250px] flex flex-col">
+                        <label for="month" class="text-sm font-medium mb-2">Месяц</label>
+                        <select name="month" class="w-full border border-black/40 rounded-md p-3 font-medium">
+                            <option value="Месяц">Месяц</option>
+                            <option value="Январь">Январь</option>
+                            <option value="Февраль">Февраль</option>
+                            <option value="Март">Март</option>
+                            <option value="Апрель">Апрель</option>
+                            <option value="Май">Май</option>
+                            <option value="Июнь">Июнь</option>
+                            <option value="Июль">Июль</option>
+                            <option value="Август">Август</option>
+                            <option value="Сентябрь">Сентябрь</option>
+                            <option value="Октябрь">Октябрь</option>
+                            <option value="Ноябрь">Ноябрь</option>
+                            <option value="Декабрь">Декабрь</option>
+                        </select>
+                    </div>
+                    <div class="w-[100px] flex flex-col">
+                        <label for="year" class="text-sm font-medium mb-2">Год</label>
+                        <input type="text" name="year" maxlength="4" placeholder="ГГГГ" class="w-full border border-black/40 rounded-md py-3 px-4 font-medium text-center">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mt-5 relative">
+                <p class="text-sm font-semibold mb-2">Укажите свой пол</p>
+                <div class="flex items-center gap-4 w-full">
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="male" >
+                        <label for="male" class="text-base font-medium">Мужчина</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="female" >
+                        <label for="female" class="text-base font-medium">Женщина</label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="other" >
+                        <label for="other" class="text-base font-medium">Другой вариант</label>
+                    </div>
+                </div>
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
+            </div>
+            <div class="flex flex-col w-full mt-5 relative">
                 <label for="email" class="text-sm font-semibold mb-2">Ваш адрес электронной почты</label>
                 <input type="email" placeholder="Ваш адрес электронной почты" name="email" class="border border-black/40 p-3 w-full rounded-md">
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
             </div>
-            <div class="flex flex-col w-full mt-5">
-                <label for="password" class="text-sm font-semibold mb-2">Придумай пароль</label>
-                <input type="password" placeholder="Придумай пароль" name="password" class="border border-black/40 p-3 w-full rounded-md">
+            <div class="flex flex-col w-full mt-5 relative">
+                <label for="password" class="text-sm font-semibold mb-2">Придумайте пароль</label>
+                <input type="password" minlength="8" maxlength="16" placeholder="Придумай пароль" name="password" class="border border-black/40 p-3 pr-10 w-full rounded-md">
+                <img src="/assets/cosial/passSee.svg" alt="Показать пароль" class="w-5 h-5 absolute right-4 bottom-4 opacity-70 hover:opacity-100 cursor-pointer">
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* обязательное поле</i>
             </div>
-            <div class="flex flex-col w-full mt-5">
+            <div class="flex flex-col w-full mt-5 relative">
                 <label for="code" class="text-sm font-semibold mb-2">Введите промокод, если есть</label>
                 <input type="text" placeholder="Код (можно буквенный) пригласившего вас человека" name="code" class="border border-black/40 p-3 w-full rounded-md">
+                <i class="text-[12px] opacity-50 absolute right-1 top-0">* необязательное поле</i>
             </div>
             <button class="bg-[#F4D710] py-4 w-full text-lg font-bold rounded-2xl mt-10 btn_register">Зарегистрироваться</button>
             <p class="mt-5 text-base">Уже есть аккаунт?<a href="" class="text-black font-bold ml-1 text_dec hover:text-[#F9D914]]">Войти</a></p>
