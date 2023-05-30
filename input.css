@@ -879,4 +879,11 @@ a {
 
 .text_dec {
     text-decoration: underline !important;
+
+}
+
+@media (max-width: 550px) {
+    .bestForm {
+        width: 100% !important;
+    }
 }
