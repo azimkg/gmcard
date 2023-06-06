@@ -887,3 +887,19 @@ a {
         width: 100% !important;
     }
 }
+
+/* help and rules page */
+.activate {
+    width: 280px;
+    height: 128px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #093A9C;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 6px solid #FAE115;
+    cursor: pointer;
+}
