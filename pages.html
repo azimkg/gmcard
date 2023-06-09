@@ -20,38 +20,43 @@
                 <h1 class="text-4xl font-bold mt-3 md:text-3xl">Один аккаунт. <span class="text-[#3399ff]">Весь мир GM!</span></h1>
                 <p class="text-lg mt-3 text-[#333333]">Один аккаунт для всех сервисов GM</p>
             </div>
-            <div class="flex flex-col justify-center items-center mt-8 w-[1200px] 2xl:w-full">
+            <div class="flex flex-col justify-center items-center mt-8 w-[1200px] 2xl:w-full relative">
                 <h4 class="uppercase text-lg font-bold">GM справка</h4>
-                <ul class="flex flex-wrap gap-4 mt-10 justify-center md:flex-col">
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О GM1LP</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Пользовательское соглашение</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Правила сообщества</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Возможности</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе скидок</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе конкурсов</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе заданий</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе кредитования, P2P</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Черный список</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О бартере</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе поиска вещей</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе для краудфандинга</a></li>
+                <a href="/edit.html" class="absolute top-8 left-4 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">Создать страницу</a>
+                <ul class="w-full flex flex-wrap gap-4 mt-12 justify-center">
+                    <li class="relative w-[280px] h-[180px] bg-[#EBF0F5] p-10 flex justify-center items-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 rounded-full bg-white p-2 absolute top-3 left-3 cursor-pointer hover:bg-opacity-70">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <h3 class="text-[#003399] text-xl text-center font-semibold">О GM1LP</h3>
+                        <a href="/edit.html" class="absolute bottom-5 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">Редактировать</a>
+                    </li>
+                    <li class="relative w-[280px] h-[180px] bg-[#EBF0F5] p-10 flex justify-center items-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 rounded-full bg-white p-2 absolute top-3 left-3 cursor-pointer hover:bg-opacity-70">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <h3 class="text-[#003399] text-xl text-center font-semibold">Пользовательское соглашение</h3>
+                        <a href="/edit.html" class="absolute bottom-5 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">Редактировать</a>
+                    </li>
+                    <li class="relative w-[280px] h-[180px] bg-[#EBF0F5] p-10 flex justify-center items-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 rounded-full bg-white p-2 absolute top-3 left-3 cursor-pointer hover:bg-opacity-70">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <h3 class="text-[#003399] text-xl text-center font-semibold">Правила сообщества</h3>
+                        <a href="/edit.html" class="absolute bottom-5 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">Редактировать</a>
+                    </li>
+                    <li class="relative w-[280px] h-[180px] bg-[#EBF0F5] p-10 flex justify-center items-center rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 rounded-full bg-white p-2 absolute top-3 left-3 cursor-pointer hover:bg-opacity-70">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <h3 class="text-[#003399] text-xl text-center font-semibold">Возможности</h3>
+                        <a href="/edit.html" class="absolute bottom-5 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">Редактировать</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
-    <footer class="flex justify-center bg-[#1f2339] py-10">
+   <footer class="flex justify-center bg-[#1f2339] py-10">
         <div class="w-[1200px] 2xl:w-full">
             <div class="flex items-start gap-10 md:flex-col md:ml-4 md:gap-2 2xl:gap-5 foot_main">
                 <img src="/assets/cosial/logo.svg" alt="Логотип" class="w-8 h-8">
@@ -98,5 +103,6 @@
             </ul>
         </div>
     </footer>
+    <script src="/js/rules.js"></script>
 </body>
 </html>

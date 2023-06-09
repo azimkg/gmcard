@@ -42,7 +42,7 @@ a {
 
 ::-webkit-scrollbar {
     width: 2px !important;
-
+    height: 2px !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -902,4 +902,24 @@ a {
     background-color: #fff;
     border: 6px solid #FAE115;
     cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    .foot_block {
+        padding-right: 16px !important;
+    }
+
+    .foot_main {
+        padding-left: 16px !important;
+    }
+}
+
+@media (max-width:767px) {
+    .foot_block {
+        padding-right: 0px !important;
+    }
+
+    .foot_main {
+        padding-left: 0px !important;
+    }
 }

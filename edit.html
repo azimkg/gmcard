@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <script src="https://cdn.tiny.cloud/1/cof0qvap0cqyyfythazn9oo3yga3yuxg71ew0scr6dr9yf60/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+  </script>
 </head>
 <body>
     <section class="w-full h-full flex items-center justify-center py-10 px-4 md:px-0 md:text-center">
@@ -20,38 +27,28 @@
                 <h1 class="text-4xl font-bold mt-3 md:text-3xl">Один аккаунт. <span class="text-[#3399ff]">Весь мир GM!</span></h1>
                 <p class="text-lg mt-3 text-[#333333]">Один аккаунт для всех сервисов GM</p>
             </div>
-            <div class="flex flex-col justify-center items-center mt-8 w-[1200px] 2xl:w-full">
+            <div class="flex flex-col justify-center items-center mt-8 w-[1200px] 2xl:w-full relative">
                 <h4 class="uppercase text-lg font-bold">GM справка</h4>
-                <ul class="flex flex-wrap gap-4 mt-10 justify-center md:flex-col">
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О GM1LP</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Пользовательское соглашение</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Правила сообщества</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Возможности</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе скидок</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе конкурсов</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе заданий</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе кредитования, P2P</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">Черный список</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О бартере</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе поиска вещей</a></li>
-                    <li class="w-[280px] md:w-full h-[128px] px-6 flex items-center justify-center bg-[#EBF0F5] hover:bg-white hover:border-[6px] hover:border-[#FAE115] hover:px-4 hover:cursor-pointer">
-                        <a href="/rules.html" class="text-[#093A9C] font-bold text-[21px] text-center">О сервисе для краудфандинга</a></li>
-                </ul>
+                <a href="/pages.html" class="absolute top-8 left-4 text-[#0056C2] hover:border-b-[1px] hover:border-[#0056C2]">< Все страницы</a>
+                <div class="w-[600px] mt-10 md:w-full px-2 flex flex-col items-center">
+                    <div class="flex flex-col gap-1 my-2 w-full">
+                        <label class="text-base font-semibold" for="alias">Алиас:</label>
+                        <input type="text" class="focus:border-gray-200 focus:ring-black/100" name="alias" id="alias">
+                    </div>
+                    <div class="flex flex-col gap-1 my-2 w-full">
+                        <label class="text-base font-semibold" for="alias">Заголовок:</label>
+                        <input type="text" class="focus:border-gray-200 focus:ring-black/100" name="alias" id="alias">
+                    </div>
+                    <div class="flex flex-col gap-1 my-2 w-full">
+                        <label class="text-base font-semibold" for="mytextarea">Контент страницы:</label>
+                        <textarea id="mytextarea" class="h-[400px]" name="mytextarea" aria-hidden="true"></textarea>
+                    </div>
+                    <button class="py-3 px-10 mt-4 bg-[#3399FF] text-white text-lg">Сохранить</button>
+                </div>
             </div>
         </div>
     </section>
-    <footer class="flex justify-center bg-[#1f2339] py-10">
+   <footer class="flex justify-center bg-[#1f2339] py-10">
         <div class="w-[1200px] 2xl:w-full">
             <div class="flex items-start gap-10 md:flex-col md:ml-4 md:gap-2 2xl:gap-5 foot_main">
                 <img src="/assets/cosial/logo.svg" alt="Логотип" class="w-8 h-8">
@@ -98,5 +95,6 @@
             </ul>
         </div>
     </footer>
+    <script src="/js/rules.js"></script>
 </body>
 </html>

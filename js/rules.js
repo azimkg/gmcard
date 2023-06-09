@@ -10,7 +10,19 @@ const black_list = document.querySelector("#black_list")
 const about_barter = document.querySelector("#about_barter")
 const about_things = document.querySelector("#about_things")
 const about_crowdfunding = document.querySelector("#about_crowdfunding")
+const textArea = document.querySelector("#myTextarea")
 
-// user_conf.addEventListener("click", () => {
-//     user_conf.classList.add("activate")
-// })
+    // user_conf.addEventListener("click", () => {
+    //     user_conf.classList.add("activate")
+    // })
+    ;
+
+function executeCommand(command) {
+    document.execCommand(command, true, null);
+}
+
+function saveFile() {
+    var content = document.getElementById("editor").innerHTML;
+    // Здесь можно добавить код для сохранения содержимого в файл или отправки на сервер
+    console.log(content);
+}
