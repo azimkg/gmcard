@@ -10,19 +10,48 @@ const black_list = document.querySelector("#black_list")
 const about_barter = document.querySelector("#about_barter")
 const about_things = document.querySelector("#about_things")
 const about_crowdfunding = document.querySelector("#about_crowdfunding")
-const textArea = document.querySelector("#myTextarea")
 
-    // user_conf.addEventListener("click", () => {
-    //     user_conf.classList.add("activate")
-    // })
-    ;
+// inputs 
+const textArea = document.querySelector("#editor")
+const boldButton = document.getElementById('boldButton');
+const italicButton = document.getElementById('italicButton');
+const linkButton = document.getElementById('linkButton');
 
-function executeCommand(command) {
-    document.execCommand(command, true, null);
-}
+const quill = new Quill('#editor', {
+    theme: "snow",
+    placeholder: 'Введите текст...',
+    readOnly: false,
+    modules: {
+        toolbar: [
+            ['bold', 'italic'],
+            ['link', 'image', 'video'],
+        ]
+    }
+});
 
-function saveFile() {
-    var content = document.getElementById("editor").innerHTML;
-    // Здесь можно добавить код для сохранения содержимого в файл или отправки на сервер
-    console.log(content);
-}
+textArea.addEventListener('input', function () {
+});
+
+boldButton.addEventListener('click', () => {
+    quill.format('bold', true);
+    boldButton.classList.toggle("bg-gray-100")
+
+});
+
+italicButton.addEventListener('click', () => {
+    quill.format('italic', true);
+    italicButton.classList.toggle("bg-gray-100")
+});
+
+linkButton.addEventListener('click', () => {
+    let url = link_inp.value
+    if (url) {
+
+        quill.format('link', url);
+    }
+});
+
+
+
+
+
