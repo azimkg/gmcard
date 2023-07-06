@@ -927,3 +927,261 @@ a {
         padding-left: 0px !important;
     }
 }
+
+
+/* card promo bg-images */
+.promo_image1 {
+    background-image: url(/assets/constructor/constructor-sale1\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.promo_image2 {
+    background-image: url(/assets/constructor/constructor-sale2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover2 {
+    background-image: url(/assets/constructor/constructor-sale2_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_image3 {
+    background-image: url(/assets/constructor/constructor-sale3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover3 {
+    background-image: url(/assets/constructor/constructor-sale3_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_image4 {
+    background-image: url(/assets/constructor/constructor-sale4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover4 {
+    background-image: url(/assets/constructor/constructor-sale4_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_image5 {
+    background-image: url(/assets/constructor/constructor-sale5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover5 {
+    background-image: url(/assets/constructor/constructor-sale5_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_image6 {
+    background-image: url(/assets/constructor/constructor-sale6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover6 {
+    background-image: url(/assets/constructor/constructor-sale6_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_image7 {
+    background-image: url(/assets/constructor/constructor-sale7.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo_hover7 {
+    background-image: url(/assets/constructor/constructor-sale7_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.file_upload {
+    background-image: url(/assets/constructor/picture-sale.png);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+/* cropper */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 5% auto;
+    background-color: #fff;
+}
+
+.cropper-container {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+#cropperImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-file-input {
+    color: #0066cb !important;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Выберите файл';
+    color: #fff;
+    display: inline-block;
+    background: #0066cb;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-file-input:hover::before {
+    border-color: none !important;
+    outline: none !important;
+}
+
+.custom-file-input:focus::before {
+    border-color: none !important;
+    outline: none !important;
+}
+
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: #0066cb !important;
+}
+
+.link_social {
+    padding-left: 30px !important;
+    padding-right: 40px !important;
+}
+
+.blueBG {
+    background-color: #0066CB !important;
+    color: #fff !important
+}
+
+.check_day {
+    background-color: #e4ecef !important;
+    border: none !important;
+}
+
+.check_day1 {
+    background-color: #0066CB !important;
+    border: none !important;
+}
+
+.colorDay {
+    background: #0066CB !important;
+    color: #fff !important;
+}
+
+.cityStyle {
+    background-color: #0066CB;
+    padding: 8px;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    column-gap: 5px;
+}
+
+.delete-icon {
+    border-left: 1px solid #fff;
+    padding-left: 5px;
+}
+
+.bg-category {
+    background-image: url(/assets/constructor/category-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slider {
+    position: relative;
+    width: 150px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background-color: #E1E1E1;
+    outline: none;
+    border-radius: 8px;
+}
+
+#slider:hover {
+    background-color: #c6c5c5;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #0066CC;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+#slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #0066CC;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-value {
+    position: absolute;
+    top: -30px;
+    left: 5%;
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.bg_inp {
+    background: #e4ecef !important;
+}
+
+#rules {
+    background-color: #607990 !important;
+}
