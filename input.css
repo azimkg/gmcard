@@ -931,7 +931,7 @@ a {
 
 /* card promo bg-images */
 .promo_image1 {
-    background-image: url(/assets/constructor/constructor-sale1\ \(1\).png);
+    background-image: url(/assets/constructor/constructor_sale1.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -944,7 +944,7 @@ a {
 }
 
 .promo_hover2 {
-    background-image: url(/assets/constructor/constructor-sale2_hover.png);
+    background-image: url(/assets/constructor/constructor_sale2_hover.png);
     background-repeat: no-repeat;
     background-position: center;
 }
