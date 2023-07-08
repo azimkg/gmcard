@@ -936,6 +936,12 @@ a {
     background-position: center;
 }
 
+.bgColor1 {
+    background-color: #fae115;
+    background-image: url(/assets/constructor/constructor_sale1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .promo_image2 {
     background-image: url(/assets/constructor/constructor-sale2.png);
@@ -944,6 +950,13 @@ a {
 }
 
 .promo_hover2 {
+    background-image: url(/assets/constructor/constructor_sale2_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bgColor2 {
+    background-color: #fae115;
     background-image: url(/assets/constructor/constructor_sale2_hover.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -961,6 +974,13 @@ a {
     background-position: center;
 }
 
+.bgColor3 {
+    background-color: #fae115;
+    background-image: url(/assets/constructor/constructor-sale3_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .promo_image4 {
     background-image: url(/assets/constructor/constructor-sale4.png);
     background-repeat: no-repeat;
@@ -968,6 +988,13 @@ a {
 }
 
 .promo_hover4 {
+    background-image: url(/assets/constructor/constructor-sale4_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bgColor4 {
+    background-color: #fae115;
     background-image: url(/assets/constructor/constructor-sale4_hover.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -985,6 +1012,13 @@ a {
     background-position: center;
 }
 
+.bgColor5 {
+    background-color: #fae115;
+    background-image: url(/assets/constructor/constructor-sale5_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .promo_image6 {
     background-image: url(/assets/constructor/constructor-sale6.png);
     background-repeat: no-repeat;
@@ -992,6 +1026,13 @@ a {
 }
 
 .promo_hover6 {
+    background-image: url(/assets/constructor/constructor-sale6_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bgColor6 {
+    background-color: #fae115;
     background-image: url(/assets/constructor/constructor-sale6_hover.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -1009,11 +1050,29 @@ a {
     background-position: center;
 }
 
+.bgColor7 {
+    background-color: #fae115;
+    background-image: url(/assets/constructor/constructor-sale7_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .file_upload {
     background-image: url(/assets/constructor/picture-sale.png);
     background-position: 50% 20%;
     background-repeat: no-repeat;
 }
+
+.file_uploadPlus {
+    background-image: url(/assets/constructor/plus.png);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+.file_uploadPlus:hover .textPlus {
+    color: #0066CB !important;
+}
+
 
 /* cropper */
 .modal {

@@ -1312,10 +1312,6 @@ select {
   height: 24px;
 }
 
-.h-\[250px\] {
-  height: 250px;
-}
-
 .h-\[258px\] {
   height: 258px;
 }
@@ -1646,6 +1642,10 @@ select {
 
 .w-\[300px\] {
   width: 300px;
+}
+
+.w-\[320px\] {
+  width: 320px;
 }
 
 .w-\[33px\] {
@@ -2409,6 +2409,11 @@ select {
   padding-right: 1.75rem;
 }
 
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
@@ -2452,6 +2457,11 @@ select {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .py-\[80px\] {
@@ -3838,6 +3848,13 @@ a {
   background-position: center;
 }
 
+.bgColor1 {
+  background-color: #fae115;
+  background-image: url(/assets/constructor/constructor_sale1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .promo_image2 {
   background-image: url(/assets/constructor/constructor-sale2.png);
   background-repeat: no-repeat;
@@ -3845,6 +3862,13 @@ a {
 }
 
 .promo_hover2 {
+  background-image: url(/assets/constructor/constructor_sale2_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgColor2 {
+  background-color: #fae115;
   background-image: url(/assets/constructor/constructor_sale2_hover.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -3862,6 +3886,13 @@ a {
   background-position: center;
 }
 
+.bgColor3 {
+  background-color: #fae115;
+  background-image: url(/assets/constructor/constructor-sale3_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .promo_image4 {
   background-image: url(/assets/constructor/constructor-sale4.png);
   background-repeat: no-repeat;
@@ -3869,6 +3900,13 @@ a {
 }
 
 .promo_hover4 {
+  background-image: url(/assets/constructor/constructor-sale4_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgColor4 {
+  background-color: #fae115;
   background-image: url(/assets/constructor/constructor-sale4_hover.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -3886,6 +3924,13 @@ a {
   background-position: center;
 }
 
+.bgColor5 {
+  background-color: #fae115;
+  background-image: url(/assets/constructor/constructor-sale5_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .promo_image6 {
   background-image: url(/assets/constructor/constructor-sale6.png);
   background-repeat: no-repeat;
@@ -3893,6 +3938,13 @@ a {
 }
 
 .promo_hover6 {
+  background-image: url(/assets/constructor/constructor-sale6_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgColor6 {
+  background-color: #fae115;
   background-image: url(/assets/constructor/constructor-sale6_hover.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -3910,10 +3962,27 @@ a {
   background-position: center;
 }
 
+.bgColor7 {
+  background-color: #fae115;
+  background-image: url(/assets/constructor/constructor-sale7_hover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .file_upload {
   background-image: url(/assets/constructor/picture-sale.png);
   background-position: 50% 20%;
   background-repeat: no-repeat;
+}
+
+.file_uploadPlus {
+  background-image: url(/assets/constructor/plus.png);
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+}
+
+.file_uploadPlus:hover .textPlus {
+  color: #0066CB !important;
 }
 
 /* cropper */
@@ -4180,6 +4249,11 @@ a {
 .hover\:border-\[\#0056C2\]:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 86 194 / var(--tw-border-opacity));
+}
+
+.hover\:border-\[\#0066cb\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 102 203 / var(--tw-border-opacity));
 }
 
 .hover\:border-\[\#5fa0de\]:hover {

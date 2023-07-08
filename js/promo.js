@@ -149,6 +149,11 @@ const su = document.querySelector("#su")
 const sn = document.querySelector("#sn")
 
 
+// file upload 
+const file_uploadPlus = document.querySelector(".file_uploadPlus")
+const fileUpload3 = document.querySelector("#fileUpload3")
+
+
 // text for count
 const textSymbol = document.querySelector("#textSymbol")
 const count = document.querySelector("#count")
@@ -271,6 +276,125 @@ promo7.addEventListener("mouseleave", () => {
     promo7.classList.remove("promo_hover7")
 })
 
+promo1.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.remove("promo_image1")
+    promo1.classList.add("bgColor1")
+})
+
+promo2.addEventListener("click", () => {
+    promo2.classList.remove("promo_image2")
+    promo2.classList.add("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
+promo3.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.remove("promo_image3")
+    promo3.classList.add("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
+promo4.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.remove("promo_image4")
+    promo4.classList.add("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
+promo5.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.remove("promo_image5")
+    promo5.classList.add("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
+promo6.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.add("promo_image7")
+    promo7.classList.remove("bgColor7")
+    promo6.classList.remove("promo_image6")
+    promo6.classList.add("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
+promo7.addEventListener("click", () => {
+    promo2.classList.add("promo_image2")
+    promo2.classList.remove("bgColor2")
+    promo7.classList.remove("promo_image7")
+    promo7.classList.add("bgColor7")
+    promo6.classList.add("promo_image6")
+    promo6.classList.remove("bgColor6")
+    promo5.classList.add("promo_image5")
+    promo5.classList.remove("bgColor5")
+    promo4.classList.add("promo_image4")
+    promo4.classList.remove("bgColor4")
+    promo3.classList.add("promo_image3")
+    promo3.classList.remove("bgColor3")
+    promo1.classList.add("promo_image1")
+    promo1.classList.remove("bgColor1")
+})
+
 // count symbol for input
 textSymbol.addEventListener('input', function () {
     const counter = textSymbol.value.length;
@@ -285,7 +409,7 @@ document.getElementById('uploadImage').addEventListener('change', function () {
     fileLabel.textContent = "Выбран файл: " + this.files[0].name;
 });
 
-// Обработчик события выбора файла
+// Обработчик события выбора файла 1
 document.getElementById('uploadImage').addEventListener('change', function (event) {
     var file = event.target.files[0];
     var image = document.getElementById('cropperImage');
@@ -323,6 +447,92 @@ document.getElementById('uploadImage').addEventListener('change', function (even
         reader.readAsDataURL(file);
     }
 });
+
+// Обработчик события выбора файла 2
+document.getElementById('uploadImage2').addEventListener('change', function (event) {
+    var file = event.target.files[0];
+    var image = document.getElementById('cropperImage2');
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        image.src = e.target.result;
+
+        var cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 1,
+            autoCropArea: 0.8
+        });
+
+        document.getElementById('cropModal2').style.display = 'block';
+
+        document.getElementById('cropButton2').addEventListener('click', function () {
+            var croppedCanvas = cropper.getCroppedCanvas();
+            var croppedImage = croppedCanvas.toDataURL();
+            document.getElementById("file_block2").style.display = "none"
+            document.getElementById('cropperResult2').style.display = "block"
+            document.getElementById('cropperResult2').src = croppedImage;
+            document.getElementById('cropModal2').style.display = 'none';
+
+            cropper.destroy();
+        });
+
+        document.getElementById('cancelButton2').addEventListener('click', function () {
+            document.getElementById('cropModal2').style.display = 'none';
+            cropper.destroy();
+        });
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
+// Обработчик события выбора файла 3
+file_uploadPlus.addEventListener("click", () => {
+    fileUpload3.classList.remove("hidden")
+    fileUpload3.classList.add("flex")
+    file_uploadPlus.classList.remove("flex")
+    file_uploadPlus.classList.add("hidden")
+})
+
+document.getElementById('uploadImage3').addEventListener('change', function (event) {
+    var file = event.target.files[0];
+    var image = document.getElementById('cropperImage3');
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        image.src = e.target.result;
+
+        var cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 1,
+            autoCropArea: 0.8
+        });
+
+        document.getElementById('cropModal3').style.display = 'block';
+
+        document.getElementById('cropButton3').addEventListener('click', function () {
+            var croppedCanvas = cropper.getCroppedCanvas();
+            var croppedImage = croppedCanvas.toDataURL();
+            document.getElementById("file_block3").style.display = "none"
+            document.getElementById('cropperResult3').style.display = "block"
+            document.getElementById('cropperResult3').src = croppedImage;
+            document.getElementById('cropModal3').style.display = 'none';
+
+            cropper.destroy();
+        });
+
+        document.getElementById('cancelButton3').addEventListener('click', function () {
+            document.getElementById('cropModal3').style.display = 'none';
+            cropper.destroy();
+        });
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
 
 // Редакторы для форматирования текста
 let quill = new Quill('#editor', {
