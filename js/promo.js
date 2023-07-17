@@ -6,6 +6,24 @@ const promo5 = document.querySelector("#promo5")
 const promo6 = document.querySelector("#promo6")
 const promo7 = document.querySelector("#promo7")
 
+// Сотритовка блоков по указанной скидке
+const pervyi = document.querySelector("#pervyi")
+const vtoroi = document.querySelector("#vtoroi")
+const tretiy = document.querySelector("#tretiy")
+const chetvertyi = document.querySelector("#chetvertyi")
+const pyatyi = document.querySelector("#pyatyi")
+const shestoi = document.querySelector("#shestoi")
+const sedmoi = document.querySelector("#sedmoi")
+const vosmoi = document.querySelector("#vosmoi")
+const devyatyi = document.querySelector("#devyatyi")
+const desyatyi = document.querySelector("#desyatyi")
+const odinnadsat = document.querySelector("#odinnadsat")
+const dvenadsat = document.querySelector("#dvenadsat")
+const trinadsat = document.querySelector("#trinadsat")
+const chetyrnadsat = document.querySelector("#chetyrnadsat")
+const pyatnadsat = document.querySelector("#pyatnadsat")
+const shestnadsat = document.querySelector("#shestnadsat")
+
 // More social
 const social = document.querySelector("#social")
 const allSocial = document.querySelector("#allSocial")
@@ -193,7 +211,150 @@ const timeValue = document.querySelector("#timeValue")
 const dayValueCheck = document.querySelector("#dayValueCheck")
 const timeValueCheck = document.querySelector("#timeValueCheck")
 
+// more Img
+const moreImg = document.querySelector("#moreImg")
+const svgImg = document.querySelector("#svgImg")
+const moreImgShow = document.querySelector("#moreImgShow")
 
+// more photo
+const photoBlock = document.querySelector("#photoBlock")
+const photoCard = document.querySelector("#photoCard")
+const delPhoto = document.querySelector("#delPhoto")
+const photoPlace = document.querySelector("#photoPlace")
+const blockFile = document.querySelector("#blockFile")
+const photoOne = document.querySelector("#photoOne")
+const photoBlock2 = document.querySelector("#photoBlock2")
+const photoCard2 = document.querySelector("#photoCard2")
+const delPhoto2 = document.querySelector("#delPhoto2")
+const photoPlace2 = document.querySelector("#photoPlace2")
+const blockFile2 = document.querySelector("#blockFile2")
+const photoOne2 = document.querySelector("#photoOne2")
+const photoBlock3 = document.querySelector("#photoBlock3")
+const photoCard3 = document.querySelector("#photoCard3")
+const delPhoto3 = document.querySelector("#delPhoto3")
+const photoPlace3 = document.querySelector("#photoPlace3")
+const blockFile3 = document.querySelector("#blockFile3")
+const photoOne3 = document.querySelector("#photoOne3")
+const photoBlock4 = document.querySelector("#photoBlock4")
+const photoCard4 = document.querySelector("#photoCard4")
+const delPhoto4 = document.querySelector("#delPhoto4")
+const photoPlace4 = document.querySelector("#photoPlace4")
+const blockFile4 = document.querySelector("#blockFile4")
+const photoOne4 = document.querySelector("#photoOne4")
+const photoBlock5 = document.querySelector("#photoBlock5")
+const photoCard5 = document.querySelector("#photoCard5")
+const delPhoto5 = document.querySelector("#delPhoto5")
+const photoPlace5 = document.querySelector("#photoPlace5")
+const blockFile5 = document.querySelector("#blockFile5")
+const photoOne5 = document.querySelector("#photoOne5")
+const morePhotos = document.querySelector("#morePhotos")
+
+// Dropdown List
+const button = document.querySelector('#toggleBtn');
+const dropdowns = document.querySelector('#dropdownList');
+const options = dropdowns.querySelectorAll('li');
+const spanOfBtn = document.querySelector("#spanOfBtn")
+
+button.addEventListener('click', function () {
+    dropdowns.classList.toggle('hidden');
+});
+
+dropdowns.addEventListener('click', function (event) {
+    const target = event.target;
+    if (target.tagName === 'LI') {
+        spanOfBtn.textContent = target.textContent;
+        dropdowns.classList.add('hidden');
+    }
+});
+
+
+//more photo
+photoOne.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    photoPlace.classList.remove("hidden")
+    reader.onload = function (event) {
+        photoPlace.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    blockFile.classList.add("hidden")
+    photoCard.classList.add("hidden")
+});
+
+delPhoto.addEventListener("click", () => {
+    photoBlock.classList.add("hidden")
+})
+
+photoOne2.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    photoPlace2.classList.remove("hidden")
+    reader.onload = function (event) {
+        photoPlace2.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    blockFile2.classList.add("hidden")
+    photoCard2.classList.add("hidden")
+});
+
+delPhoto2.addEventListener("click", () => {
+    photoBlock2.classList.add("hidden")
+})
+
+photoOne3.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    photoPlace3.classList.remove("hidden")
+    reader.onload = function (event) {
+        photoPlace3.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    blockFile3.classList.add("hidden")
+    photoCard3.classList.add("hidden")
+});
+
+delPhoto3.addEventListener("click", () => {
+    photoBlock3.classList.add("hidden")
+})
+
+photoOne4.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    photoPlace4.classList.remove("hidden")
+    reader.onload = function (event) {
+        photoPlace4.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    blockFile4.classList.add("hidden")
+    photoCard4.classList.add("hidden")
+});
+
+delPhoto4.addEventListener("click", () => {
+    photoBlock4.classList.add("hidden")
+})
+
+photoOne5.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    photoPlace5.classList.remove("hidden")
+    reader.onload = function (event) {
+        photoPlace5.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+    blockFile5.classList.add("hidden")
+    photoCard5.classList.add("hidden")
+});
+
+delPhoto5.addEventListener("click", () => {
+    photoBlock5.classList.add("hidden")
+})
+
+morePhotos.addEventListener("click", () => {
+    photoBlock5.classList.remove("hidden")
+    morePhotos.classList.add("hidden")
+})
+
+//   youTube
 checkYoutube.addEventListener("change", () => {
     if (checkYoutube.checked) {
         youtube_link.classList.remove("hidden")
@@ -291,6 +452,26 @@ promo1.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.remove("promo_image1")
     promo1.classList.add("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("hidden")
+    tretiy.classList.remove("flex")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo2.addEventListener("click", () => {
@@ -308,6 +489,26 @@ promo2.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("hidden")
+    pervyi.classList.remove("flex")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("hidden")
+    tretiy.classList.remove("flex")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo3.addEventListener("click", () => {
@@ -325,6 +526,26 @@ promo3.addEventListener("click", () => {
     promo3.classList.add("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("hidden")
+    tretiy.classList.remove("flex")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo4.addEventListener("click", () => {
@@ -342,6 +563,26 @@ promo4.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("flex")
+    tretiy.classList.remove("hidden")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo5.addEventListener("click", () => {
@@ -359,6 +600,26 @@ promo5.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("flex")
+    tretiy.classList.remove("hidden")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo6.addEventListener("click", () => {
@@ -376,6 +637,26 @@ promo6.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("flex")
+    tretiy.classList.remove("hidden")
+    chetvertyi.classList.add("hidden")
+    chetvertyi.classList.remove("flex")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 promo7.addEventListener("click", () => {
@@ -393,13 +674,36 @@ promo7.addEventListener("click", () => {
     promo3.classList.remove("bgColor3")
     promo1.classList.add("promo_image1")
     promo1.classList.remove("bgColor1")
+    pervyi.classList.add("flex")
+    pervyi.classList.remove("hidden")
+    vtoroi.classList.add("flex")
+    vtoroi.classList.remove("hidden")
+    tretiy.classList.add("flex")
+    tretiy.classList.remove("hidden")
+    chetvertyi.classList.add("flex")
+    chetvertyi.classList.remove("hidden")
+    pyatyi.classList.add("flex")
+    shestoi.classList.add("flex")
+    sedmoi.classList.add("flex")
+    vosmoi.classList.add("flex")
+    devyatyi.classList.add("flex")
+    desyatyi.classList.add("flex")
+    odinnadsat.classList.add("flex")
+    dvenadsat.classList.add("flex")
+    trinadsat.classList.add("flex")
+    chetyrnadsat.classList.add("flex")
+    pyatnadsat.classList.add("flex")
+    shestnadsat.classList.add("flex")
 })
 
 // count symbol for input
-textSymbol.addEventListener('input', function () {
-    const counter = textSymbol.value.length;
-    count.textContent = counter;
-});
+function countDown(event) {
+    const input = event.target;
+    const maxLength = parseInt(input.getAttribute('maxlength'));
+    const charCount = maxLength - input.value.length;
+
+    document.getElementById('count').textContent = charCount;
+}
 
 // Убираем надпись рядом с type="file"
 document.getElementById('uploadImage').addEventListener('change', function () {
@@ -1550,4 +1854,10 @@ timeValueCheck.addEventListener("change", () => {
     if (!timeValueCheck.checked) {
         timeValue.classList.add("bg_inp")
     }
+})
+
+// more img 
+moreImg.addEventListener("click", () => {
+    svgImg.classList.toggle("rotate-180")
+    moreImgShow.classList.toggle("hidden")
 })

@@ -718,37 +718,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center" id="pervyi">
                         <h3 class="text-base font-bold w-[280px]">Какой % скидки или суммы в рублях вы готовы предоставить?</h3>
                         <div class="flex gap-5">
-                            <input type="number" name="" id="" placeholder="50" class="rounded-lg w-[120px]">
-                            <select name="sale" id="" class="rounded-lg w-[120px]">
-                                <option value="%">%</option>
-                                <option value="₽">₽</option>
-                            </select>
+                            <input type="text" name="" id="" placeholder="50" maxlength="4" class="border-gray-300 rounded-lg w-[120px]">
+                            <div class="relative inline-block">
+                                <button id="toggleBtn" type="button" class="w-28 py-2 px-4 bg-white border border-gray-300 rounded-md shadow-sm text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring-blue active:bg-gray-100 active:text-gray-700 transition duration-150 ease-in-out flex items-center justify-between">
+                                <span id="spanOfBtn">%</span> 
+                                <svg class="w-4 h-4 ml-2 -mr-1 text-[#2578cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                                </button>
+                                <ul id="dropdownList" class="absolute z-10 w-28 mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden">
+                                  <li class="py-2 px-4 text-sm leading-5 text-gray-700 hover:bg-blue-100 hover:text-blue-700 cursor-pointer">%</li>
+                                  <li class="py-2 px-4 text-sm leading-5 text-gray-700 hover:bg-blue-100 hover:text-blue-700 cursor-pointer">₽</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center" id="vtoroi">
                         <div class="flex flex-col">
                             <h3 class="text-base font-bold ">Если для получения скидки необходимо вводить код</h3>
                             <p class="text-black/50">(например интернет-магазин), то вы можете указать его здесь. Если ничего вводить не нужно, то оставьте поле пустым.</p>
                         </div>
                         <div class="flex flex-col ml-12">
                             <label for="code_for_sale" class="text-sm font-bold">Код для скидки</label>
-                            <input type="text" name="code_for_sale" placeholder="NJTON564YNN565N56" class="rounded-lg w-[250px] mt-3">
+                            <input type="text" name="code_for_sale" placeholder="NJTON564YNN565N56" class="border-gray-300 rounded-lg w-[250px] mt-3">
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center" id="tretiy">
                         <div class="flex flex-col">
                             <p class="text-black/50"> <strong class="text-black">Если скидка действует при заказе определенной суммы,</strong> то необходимо указать от какой суммы именно. Если скидка действует независимо от суммы заказа, то оставьте поле пустым.</p>
                         </div>
                         <div class="flex flex-col ml-12 relative">
                             <label for="code_for_sale" class="text-sm font-bold">Скидка действует при заказе от</label>
-                            <input type="text" name="code_for_sale" placeholder="1000" class="rounded-lg w-[250px] mt-3 pl-3">
+                            <input type="text" name="code_for_sale" placeholder="1000" class="border-gray-300 rounded-lg w-[250px] mt-3 pl-3">
                             <span class="absolute bottom-2 right-3 text-black/50">₽</span>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl justify-between items-center" id="chetvertyi">
                         <div>
                             <h3 class="text-base font-bold">Если у вас есть бесплатная доставка, то вы можете отметить этот пункт.</h3>
                             <p class="text-black/50">Если бесплатной доставки нет, то ничего отмечать не нужно.</p>
@@ -758,15 +766,15 @@
                             <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                         </label>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full" id="pyatyi">
                         <h3 class="text-base font-bold">Введите заголовок (названии акции), максимум 64 символа.</h3>
                         <p class="text-black/50">Лайфхак: вы можете указать в заголовке имя своего бренда (пример в строке), что поможет пользователям отслеживать все ваши акции и возможно сделает вас более узнаваемым.</p>
                         <div class="relative">
-                            <input type="text" class="w-full rounded-lg mt-3" placeholder="Скидки до 30% в Desigual! Зарядись энергией Desigual!" id="textSymbol" maxlength="64">
-                            <span id="count" class="absolute right-3 bottom-[10px] text-[#2578cf] font-bold">0</span>
+                            <input type="text" oninput="countDown(event)" class="border-gray-300 w-full rounded-lg mt-3" placeholder="Скидки до 30% в Desigual! Зарядись энергией Desigual!" id="textSymbol" maxlength="64">
+                            <span id="count" class="absolute right-3 bottom-[10px] text-[#2578cf] font-bold">64</span>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full" id="shestoi">
                         <div class="flex justify-between mb-8">
                             <div class="w-3/3]">
                                 <h3 class="text-base font-bold">Загрузите фотографии в слайдер, что вы предлагаете.</h3>
@@ -853,8 +861,85 @@
                             </div>
                         </div>
                         </div>
+                        <div class="flex items-center justify-center mt-5">
+                            <p class="text-[#2578cf] text-base border-b border-dashed border-[#2578cf] cursor-pointer" id="moreImg">
+                                Загрузить дополнительный фотографии 
+                            </p>
+                            <svg id="svgImg" class="w-5 h-5 text-[#2578cf]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div id="moreImgShow" class="hidden flex flex-col mt-5">
+                            <h3 class="font-bold text-center">Дополнительные фото в карточке под спойлером (не обязательно)</h3>
+                            <p class="text-center mt-5 text-black/50 px-16">Выберите стиль отображения дополнительных фото, увидеть отличия вы сможете при просмотре акции.</p>
+                            <div class="relative flex flex-wrap justify-between mt-4">
+                            <div id="photoBlock" class="overflow-hidden relative w-[130px] h-full">
+                                <div id="photoCard" class="relative bg-[#e9eef1] w-full h-[130px] rounded-2xl customPhoto1">
+                                    <svg fill="currentColor" id="delPhoto" class="w-7 h-7 absolute z-50 text-black/30 right-0 bg-white rounded-md hover:opacity-80 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M17,8 C17.5522847,8 18,8.44771525 18,9 L18,19 C18,20.6568542 16.6568542,22 15,22 L9,22 C7.34314575,22 6,20.6568542 6,19 L6,9 C6,8.44771525 6.44771525,8 7,8 L17,8 Z M16,10 L8,10 L8,19 C8,19.5522847 8.44771525,20 9,20 L15,20 C15.5522847,20 16,19.5522847 16,19 L16,10 Z M9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,4 L19,4 C19.5522847,4 20,4.44771525 20,5 C20,5.55228475 19.5522847,6 19,6 L5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 L9,4 L9,3 Z"/>
+                                    </svg>
+                                </div>
+                                <img src="" id="photoPlace" class="w-full h-[130px] rounded-2xl hidden" alt="Фото">
+                                <div id="blockFile" class="flex flex-col items-center relative w-full h-[80px]">
+                                    <input type="file" id="photoOne" class="absolute left-0 w-full top-4 custom-file-inputs focus:outline-none focus:border-none">
+                                    <label for="photoOne" class="text-[#a1a5a6] text-sm absolute top-14">Файл не выбран</label>
+                                </div>
+                            </div>
+                            <div id="photoBlock2" class="overflow-hidden relative w-[130px] h-full">
+                                <div id="photoCard2" class="relative bg-[#e9eef1] w-full h-[130px] rounded-2xl customPhoto1">
+                                    <svg fill="currentColor" id="delPhoto2" class="w-7 h-7 absolute z-50 text-black/30 right-0 bg-white rounded-md hover:opacity-80 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M17,8 C17.5522847,8 18,8.44771525 18,9 L18,19 C18,20.6568542 16.6568542,22 15,22 L9,22 C7.34314575,22 6,20.6568542 6,19 L6,9 C6,8.44771525 6.44771525,8 7,8 L17,8 Z M16,10 L8,10 L8,19 C8,19.5522847 8.44771525,20 9,20 L15,20 C15.5522847,20 16,19.5522847 16,19 L16,10 Z M9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,4 L19,4 C19.5522847,4 20,4.44771525 20,5 C20,5.55228475 19.5522847,6 19,6 L5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 L9,4 L9,3 Z"/>
+                                    </svg>
+                                </div>
+                                <img src="" id="photoPlace2" class="w-full h-[130px] rounded-2xl hidden" alt="Фото">
+                                <div id="blockFile2" class="flex flex-col items-center relative w-full h-[80px]">
+                                    <input type="file" id="photoOne2" class="absolute left-0 w-full top-4 custom-file-inputs focus:outline-none focus:border-none">
+                                    <label for="photoOne" class="text-[#a1a5a6] text-sm absolute top-14">Файл не выбран</label>
+                                </div>
+                            </div>
+                            <div id="photoBlock3" class="overflow-hidden relative w-[130px] h-full">
+                                <div id="photoCard3" class="relative bg-[#e9eef1] w-full h-[130px] rounded-2xl customPhoto1">
+                                    <svg fill="currentColor" id="delPhoto3" class="w-7 h-7 absolute z-50 text-black/30 right-0 bg-white rounded-md hover:opacity-80 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M17,8 C17.5522847,8 18,8.44771525 18,9 L18,19 C18,20.6568542 16.6568542,22 15,22 L9,22 C7.34314575,22 6,20.6568542 6,19 L6,9 C6,8.44771525 6.44771525,8 7,8 L17,8 Z M16,10 L8,10 L8,19 C8,19.5522847 8.44771525,20 9,20 L15,20 C15.5522847,20 16,19.5522847 16,19 L16,10 Z M9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,4 L19,4 C19.5522847,4 20,4.44771525 20,5 C20,5.55228475 19.5522847,6 19,6 L5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 L9,4 L9,3 Z"/>
+                                    </svg>
+                                </div>
+                                <img src="" id="photoPlace3" class="w-full h-[130px] rounded-2xl hidden" alt="Фото">
+                                <div id="blockFile3" class="flex flex-col items-center relative w-full h-[80px]">
+                                    <input type="file" id="photoOne3" class="absolute left-0 w-full top-4 custom-file-inputs focus:outline-none focus:border-none">
+                                    <label for="photoOne" class="text-[#a1a5a6] text-sm absolute top-14">Файл не выбран</label>
+                                </div>
+                            </div>
+                            <div id="photoBlock4" class="overflow-hidden relative w-[130px] h-full">
+                                <div id="photoCard4" class="relative bg-[#e9eef1] w-full h-[130px] rounded-2xl customPhoto1">
+                                    <svg fill="currentColor" id="delPhoto4" class="w-7 h-7 absolute z-50 text-black/30 right-0 bg-white rounded-md hover:opacity-80 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M17,8 C17.5522847,8 18,8.44771525 18,9 L18,19 C18,20.6568542 16.6568542,22 15,22 L9,22 C7.34314575,22 6,20.6568542 6,19 L6,9 C6,8.44771525 6.44771525,8 7,8 L17,8 Z M16,10 L8,10 L8,19 C8,19.5522847 8.44771525,20 9,20 L15,20 C15.5522847,20 16,19.5522847 16,19 L16,10 Z M9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,4 L19,4 C19.5522847,4 20,4.44771525 20,5 C20,5.55228475 19.5522847,6 19,6 L5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 L9,4 L9,3 Z"/>
+                                    </svg>
+                                </div>
+                                <img src="" id="photoPlace4" class="w-full h-[130px] rounded-2xl hidden" alt="Фото">
+                                <div id="blockFile4" class="flex flex-col items-center relative w-full h-[80px]">
+                                    <input type="file" id="photoOne4" class="absolute left-0 w-full top-4 custom-file-inputs focus:outline-none focus:border-none">
+                                    <label for="photoOne" class="text-[#a1a5a6] text-sm absolute top-14">Файл не выбран</label>
+                                </div>
+                            </div>
+                            <div id="morePhotos" class="w-[130px] h-[200px] reltive morePhoto bg-white border rounded-2xl flex flex-col justify-center items-center relative overflow-hidden hover:cursor-pointer hover:border-[#0066cb] hover:border-dashed">
+                                <span class="absolute bottom-8 text-sm text-center px-4">Добавить еще фото</span>
+                            </div>
+                            <div id="photoBlock5" class="overflow-hidden relative w-[130px] h-full hidden">
+                                <div id="photoCard5" class="relative bg-[#e9eef1] w-full h-[130px] rounded-2xl customPhoto1">
+                                    <svg fill="currentColor" id="delPhoto5" class="w-7 h-7 absolute z-50 text-black/30 right-0 bg-white rounded-md hover:opacity-80 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M17,8 C17.5522847,8 18,8.44771525 18,9 L18,19 C18,20.6568542 16.6568542,22 15,22 L9,22 C7.34314575,22 6,20.6568542 6,19 L6,9 C6,8.44771525 6.44771525,8 7,8 L17,8 Z M16,10 L8,10 L8,19 C8,19.5522847 8.44771525,20 9,20 L15,20 C15.5522847,20 16,19.5522847 16,19 L16,10 Z M9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 L15,4 L19,4 C19.5522847,4 20,4.44771525 20,5 C20,5.55228475 19.5522847,6 19,6 L5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 L9,4 L9,3 Z"/>
+                                    </svg>
+                                </div>
+                                <img src="" id="photoPlace5" class="w-full h-[130px] rounded-2xl hidden" alt="Фото">
+                                <div id="blockFile5" class="flex flex-col items-center relative w-full h-[80px]">
+                                    <input type="file" id="photoOne5" class="absolute left-0 w-full top-4 custom-file-inputs focus:outline-none focus:border-none">
+                                    <label for="photoOne" class="text-[#a1a5a6] text-sm absolute top-14">Файл не выбран</label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col" id="sedmoi">
                         <div class="flex justify-between items-center">
                             <p class="w-[450px] text-black/50"><strong class="text-black">Если у вас есть видео на YouTube о том, чем вы занимаетесь</strong>
                                 или продаете, вы можете указать здесь ссылку на него.
@@ -868,11 +953,11 @@
                             <div class="h-[1px] w-full bg-black/30"></div>
                             <div class="flex flex-col mt-4">
                                 <label for="" class="font-bold">Ссылка на ролик</label>
-                                <input type="text" class="w-full rounded-lg mt-3" placeholder="https://www.youtube.com/watch?v=4kwHJWwJxnU">
+                                <input type="text" class="w-full rounded-lg mt-3 border-gray-300" placeholder="https://www.youtube.com/watch?v=4kwHJWwJxnU">
                             </div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col w-full" id="vosmoi">
                         <h3 class="font-bold mb-4">Расскажите немного о себе или вашей компании</h3>
                         <div id="editor" class="w-full min-h-[200px]"></div>
                         <div class="my-6">
@@ -892,7 +977,7 @@
                             <div id="editor2" class="w-full min-h-[200px]"></div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col" id="devyatyi">
                         <div class="flex justify-between items-center">
                             <h3 class="mr-4 font-bold">Если у вас или вашего бизнеса есть сайт или сообщества в социальных сетях,
                                 <br> вы можете указать ссылки на них ниже.   
@@ -1403,7 +1488,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col" id="desyatyi">
                         <h3 class="font-bold text-base">Укажите в блоке: график работы, адрес и телефоны</h3>
                         <p class="text-black/50">для одной акции можно заполнить не более 4-х блоков</p>
                         <div class="bg-[#e9eef1] h-full w-full rounded-lg mt-5">
@@ -1632,7 +1717,7 @@
                             <p id="show_org4" class="text-center mt-5 font-bold text-sm text-[#5fa0de] cursor-pointer hover:border-b-2 hover:border-dashed hover:border-[#5fa0de] hidden">Добавить еще организацию</p>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col" id="odinnadsat">
                         <div class="flex items-start">
                             <div>
                                 <h3 class="font-bold">Если ваша акция доступна только в определенные дни и часы.</h3>
@@ -1681,10 +1766,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white p-8 mt-8 rounded-2xl flex-col" id="dvenadsat">
                         <h3 class="font-bold">Укажите город(а) (не более 20), в котором будет проходить ваша акция.</h3>
                         <div class="custom-select relative w-full mt-5">
-                            <input type="text" class="select-input w-full rounded-md" placeholder="Укажите город">
+                            <input type="text" class="select-input w-full rounded-md border-gray-300" placeholder="Укажите город">
                             <ul class="select-dropdown hidden absolute z-50 w-full p-0 mt-1 bg-white border border-[#ccc] max-h-[200px] overflow-y-auto">
                                 <li class="p-1 cursor-pointer hover:bg-[#f5f5f5]">Москва</li>
                                 <li class="p-1 cursor-pointer hover:bg-[#f5f5f5]">Санкт-Петербург</li>
@@ -1702,7 +1787,7 @@
                             <div id="selectedCities" class="mt-5 flex flex-wrap gap-4"></div>
                         </div>
                     </div>
-                    <div class="flex bg-white py-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white py-8 mt-8 rounded-2xl flex-col" id="trinadsat">
                         <h3 class="font-bold ml-8">Выберите категории, к которым будет прикреплена ваша акция.</h3>
                         <div class="mt-5 bg-category w-full flex max-h-[530px] " id="container_block">
                             <ul class="bg-[#fdfdfd] w-[150px]" id="category_list1">
@@ -1778,7 +1863,7 @@
                             <div id="tag-container" class="flex flex-wrap gap-3 py-3"></div>
                         </div>
                     </div>
-                    <div class="flex bg-white py-8 mt-8 rounded-2xl justify-between p-8">
+                    <div class="flex bg-white py-8 mt-8 rounded-2xl justify-between p-8" id="chetyrnadsat">
                         <p class="w-[380px] text-black/50"><strong class="text-black">На какое количество дней будет запущена акция?</strong>Максимум 30 дней.</p>
                         <div class="flex items-center gap-4">
                             <div class="flex items-center gap-2 relative w-[180px]">
@@ -1790,7 +1875,7 @@
                             <div class="border text-center py-2 w-[50px] rounded-md text-lg" id="slider_value">0</div>
                         </div>
                     </div>
-                    <div class="flex bg-white py-8 mt-8 rounded-2xl justify-between p-8 items-start">
+                    <div class="flex bg-white py-8 mt-8 rounded-2xl justify-between p-8 items-start" id="pyatnadsat">
                         <div class="w-[450px]">
                             <h3 class="font-bold">Желаете чтобы ваша акция так же появлялась и в баннере на главной странице сайта?<span id="hiddenText" class="hidden font-normal text-black/50">В этом случае стоимость запуска акции будет в 3 раза дороже. Бесплатно, если вы предлагаете скидку более 50%.</span></h3>
                         </div>
@@ -1803,7 +1888,7 @@
                             <span>Да, желаю</span>
                         </div>
                     </div>
-                    <div class="flex bg-white py-8 mt-8 rounded-2xl flex-col">
+                    <div class="flex bg-white py-8 mt-8 rounded-2xl flex-col" id="shestnadsat">
                         <div class="flex items-center justify-between mx-8">
                             <h3 class="font-bold">Дополнительные опции (только для Экспертов)</h3>
                             <a href="#" class="text-[#0066CB] hover:underline">подробнее об эксперт-аккаунтах</a>
@@ -1812,7 +1897,7 @@
                         <div class="flex justify-between items-center mx-8">
                             <div class="flex items-center gap-1">
                                 <p>Поднимать акцию на первое место каждые</p>
-                                <input type="text" id="timeValue" class="w-[45px] bg_inp rounded-md" placeholder="0">
+                                <input type="text" id="timeValue" class="w-[45px] bg_inp rounded-md border-gray-300" placeholder="0">
                                 <label for="timeValue">часа</label>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">
@@ -1824,7 +1909,7 @@
                         <div class="flex justify-between items-center mx-8">
                             <div class="flex items-center gap-1">
                                 <p>Автоматически перезапускать акцию после завершения на</p>
-                                <input type="text" id="dayValue" class="w-[45px] bg_inp rounded-md" placeholder="0">
+                                <input type="text" id="dayValue" class="w-[45px] bg_inp rounded-md border-gray-300" placeholder="0">
                                 <label for="dayValue">дней</label>
                             </div>
                             <label class="relative inline-flex items-center cursor-pointer">

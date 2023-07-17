@@ -1063,6 +1063,12 @@ a {
     background-repeat: no-repeat;
 }
 
+.customPhoto1 {
+    background-image: url(/assets/constructor/picture-sale.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .file_uploadPlus {
     background-image: url(/assets/constructor/plus.png);
     background-position: 50% 20%;
@@ -1073,6 +1079,46 @@ a {
     color: #0066CB !important;
 }
 
+.morePhoto {
+    background-image: url(/assets/constructor/plus.png);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+.morePhoto:hover span {
+    color: #0066CB !important;
+}
+
+.custom-selects {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-selects select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.custom-selects .select-arrow {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid blue;
+    /* Используется синий цвет */
+    transition: transform 0.3s;
+}
+
+.custom-selects select:focus+.select-arrow {
+    transform: rotate(180deg);
+}
 
 /* cropper */
 .modal {
@@ -1140,6 +1186,48 @@ a {
 }
 
 .custom-file-input:active::before {
+    background: #0066cb !important;
+}
+
+.custom-file-inputs {
+    color: #0066cb !important;
+}
+
+.custom-file-inputs::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-inputs::before {
+    content: 'Выберите файл';
+    color: #fff;
+    display: inline-block;
+    background: #0066cb;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.custom-file-inputs:hover::before {
+    border-color: none !important;
+    outline: none !important;
+}
+
+.custom-file-inputs:focus::before {
+    border-color: none !important;
+    outline: none !important;
+}
+
+
+.custom-file-inputs:active {
+    outline: 0;
+}
+
+.custom-file-inputs:active::before {
     background: #0066cb !important;
 }
 
