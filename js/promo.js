@@ -1738,25 +1738,87 @@ category_list4.addEventListener("mouseover", () => {
 })
 
 // first block
+// category_list3.addEventListener('change', function (event) {
+//     const checkbox = event.target;
+//     const listItem = checkbox.parentNode;
+//     const itemName = listItem.textContent.trim();
+
+//     if (checkbox.checked) {
+//         createTag(itemName, checkbox);
+//     } else {
+//         removeTag(itemName);
+//     }
+// });
+
+// // Функция для создания тега
+// function createTag(itemName, checkbox) {
+//     const tag = document.createElement('div');
+//     tag.classList.add('tag');
+//     tag.classList.add('cityStyle');
+//     tag.innerHTML = itemName + '<img class="cursor-pointer w-7 border-white border-l pl-2" src="/assets/constructor/delete.svg"></img>';
+//     tag.querySelector('img').addEventListener('click', function () {
+//         const clickedCheckbox = checkbox;
+//         const clickedTag = event.target.parentNode;
+//         clickedCheckbox.checked = false;
+//         tagContainer.removeChild(clickedTag);
+//     });
+//     tagContainer.appendChild(tag);
+// }
+
+// // Функция для удаления тега
+// function removeTag(itemName) {
+//     const tags = tagContainer.getElementsByClassName('tag');
+//     Array.from(tags).forEach(function (tag) {
+//         if (tag.textContent.includes(itemName)) {
+//             tagContainer.removeChild(tag);
+//         }
+//     });
+// }
+
 category_list3.addEventListener('change', function (event) {
     const checkbox = event.target;
     const listItem = checkbox.parentNode;
     const itemName = listItem.textContent.trim();
 
+    // Выбираем/снимаем выбор соответствующих опций второго списка
+    const category_list2Checkboxes = category_list4.querySelectorAll('input[type="checkbox"]');
+    category_list2Checkboxes.forEach((checkbox) => {
+        checkbox.checked = event.target.checked;
+    });
+
     if (checkbox.checked) {
-        createTag(itemName, checkbox);
+        const countSelectedOptions = category_list2Checkboxes.length;
+        createTag(itemName, checkbox, countSelectedOptions);
     } else {
         removeTag(itemName);
     }
 });
 
+// Обработчик события для второго списка
+category_list4.addEventListener('change', function () {
+    const selectedOptions = category_list4.querySelectorAll('input[type="checkbox"]:checked');
+    const countSelectedOptions = selectedOptions.length;
+
+    // Обновляем количество выбранных элементов второго списка в тегах первого списка
+    const tags = tagContainer.getElementsByClassName('tag');
+    Array.from(tags).forEach(function (tag) {
+        const itemName = tag.getAttribute('data-item');
+        if (itemName) {
+            const activeTag = tagContainer.querySelector(`div.tag[data-item="${itemName}"]`);
+            if (activeTag) {
+                activeTag.textContent = `${itemName} (Выбрано опций: ${countSelectedOptions})`;
+            }
+        }
+    });
+});
+
 // Функция для создания тега
-function createTag(itemName, checkbox) {
+function createTag(itemName, checkbox, countSelectedOptions) {
     const tag = document.createElement('div');
     tag.classList.add('tag');
     tag.classList.add('cityStyle');
-    tag.innerHTML = itemName + '<img class="cursor-pointer w-6" src="/assets/constructor/delete.svg"></img>';
-
+    tag.setAttribute('data-item', itemName);
+    tag.innerHTML = `${itemName} (Выбрано опций: ${countSelectedOptions}) <img class="cursor-pointer w-7 border-white border-l pl-2" src="/assets/constructor/delete.svg"></img>`;
     tag.querySelector('img').addEventListener('click', function () {
         const clickedCheckbox = checkbox;
         const clickedTag = event.target.parentNode;
@@ -1770,53 +1832,54 @@ function createTag(itemName, checkbox) {
 function removeTag(itemName) {
     const tags = tagContainer.getElementsByClassName('tag');
     Array.from(tags).forEach(function (tag) {
-        if (tag.textContent.includes(itemName)) {
+        if (tag.getAttribute('data-item') === itemName) {
             tagContainer.removeChild(tag);
         }
     });
 }
 
 // second block
-category_list4.addEventListener('change', function (event) {
-    const checkbox = event.target;
-    const listItem = checkbox.parentNode;
-    const itemName = listItem.textContent.trim();
+// category_list4.addEventListener('change', function (event) {
+//     const checkbox = event.target;
+//     const listItem = checkbox.parentNode;
+//     const itemName = listItem.textContent.trim();
 
-    if (checkbox.checked) {
-        createTags(itemName, checkbox);
-    } else {
-        removeTags(itemName);
-    }
-});
+//     if (checkbox.checked) {
+//         createTags(itemName, checkbox);
+//     } else {
+//         removeTags(itemName);
+//     }
+// });
 
-// Функция для создания тега
-function createTags(itemName, checkbox) {
-    const tag = document.createElement('div');
-    tag.classList.add('tag');
-    tag.classList.add('cityStyle');
-    tag.innerHTML = itemName + '<img class="cursor-pointer w-6" src="/assets/constructor/delete.svg"></img>';
+// // Функция для создания тега
+// function createTags(itemName, checkbox) {
+//     const tag = document.createElement('div');
+//     tag.classList.add('tag');
+//     tag.classList.add('cityStyle');
+//     tag.innerHTML = itemName + '<img class="cursor-pointer w-7 border-white border-l pl-2" src="/assets/constructor/delete.svg"></img>';
 
-    tag.querySelector('img').addEventListener('click', function () {
-        const clickedCheckbox = checkbox;
-        const clickedTag = event.target.parentNode;
-        clickedCheckbox.checked = false;
-        tagContainer.removeChild(clickedTag);
-    });
-    tagContainer.appendChild(tag);
-}
+//     tag.querySelector('img').addEventListener('click', function () {
+//         const clickedCheckbox = checkbox;
+//         const clickedTag = event.target.parentNode;
+//         clickedCheckbox.checked = false;
+//         tagContainer.removeChild(clickedTag);
+//     });
+//     tagContainer.appendChild(tag);
+// }
 
-// Функция для удаления тега
-function removeTags(itemName) {
-    const tags = tagContainer.getElementsByClassName('tag');
-    Array.from(tags).forEach(function (tag) {
-        if (tag.textContent.includes(itemName)) {
-            tagContainer.removeChild(tag);
-        }
-    });
-}
+// // Функция для удаления тега
+// function removeTags(itemName) {
+//     const tags = tagContainer.getElementsByClassName('tag');
+//     Array.from(tags).forEach(function (tag) {
+//         if (tag.textContent.includes(itemName)) {
+//             tagContainer.removeChild(tag);
+//         }
+//     });
+// }
+
+
 
 // slider
-
 slider.addEventListener('mousemove', function () {
     const value = slider.value;
     const thumbPosition = slider.offsetWidth * (value / slider.max) - 15.5;
