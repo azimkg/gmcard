@@ -1089,6 +1089,11 @@ a {
     color: #0066CB !important;
 }
 
+.selected {
+    background-color: #0066CB !important;
+    color: #fff !important;
+}
+
 .custom-selects {
     position: relative;
     display: inline-block;
@@ -1149,6 +1154,15 @@ a {
 
 .custom-file-input {
     color: #0066cb !important;
+}
+
+.bgSh {
+    background: repeating-linear-gradient(-45deg, #e3e9ef, #e3e9ef 2.5%, #fff 0, #fff 10%)
+}
+
+.shadoFi {
+    -webkit-box-shadow: 0 0 39px -14px rgba(0, 0, 0, .75) !important;
+    box-shadow: 0 0 39px -14px rgba(0, 0, 0, .75) !important;
 }
 
 .custom-file-input::-webkit-file-upload-button {

@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['*.html'],
+  variants: {
+    extend: {
+      textDecoration: ['hover', 'focus', 'decorate-dashed'],
+    },
+  },
   theme: {
     screens: {
       'md': { 'max': '767px' },

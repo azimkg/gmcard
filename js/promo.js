@@ -191,12 +191,15 @@ const dropdownItems = Array.from(selectDropdown.querySelectorAll('li'));
 const selectedCitiesContainer = document.getElementById('selectedCities');
 
 // category lists
-const category_list1 = document.querySelector("#category_list1")
+const category_list1 = document.querySelector('#category_list1');
+let lastHoveredItem = null;
 const category_list2 = document.querySelector("#category_list2")
+let lastHoveredItem2 = null;
 const category_list3 = document.querySelector("#category_list3")
 const category_list4 = document.querySelector("#category_list4")
 const tagContainer = document.querySelector("#tag-container")
 const container_block = document.querySelector("#container_block")
+
 
 // Slider
 const slider = document.querySelector('#slider');
@@ -1687,7 +1690,14 @@ function removeSelectedCity(city) {
 
 
 // category lists 
-category_list1.addEventListener("mouseover", (e) => {
+category_list1.addEventListener("mouseover", (event) => {
+    if (event.target.tagName === 'LI') {
+        if (lastHoveredItem && lastHoveredItem !== event.target) {
+            lastHoveredItem.classList.remove("selected")
+        }
+        lastHoveredItem = event.target;
+        lastHoveredItem.classList.add("selected")
+    }
     category_list2.classList.remove("hidden")
     category_list2.classList.add("block")
     category_list3.classList.remove("block")
@@ -1699,6 +1709,9 @@ category_list1.addEventListener("mouseleave", () => {
     category_list2.classList.add("hidden")
 })
 
+
+
+
 container_block.addEventListener("mouseleave", () => {
     category_list2.classList.remove("block")
     category_list2.classList.add("hidden")
@@ -1706,9 +1719,19 @@ container_block.addEventListener("mouseleave", () => {
     category_list3.classList.add("hidden")
     category_list4.classList.remove("block")
     category_list4.classList.add("hidden")
+    if (lastHoveredItem && lastHoveredItem !== event.target) {
+        lastHoveredItem.classList.remove("selected")
+    }
 })
 
-category_list2.addEventListener("mouseover", () => {
+category_list2.addEventListener("mouseover", (event) => {
+    if (event.target.tagName === 'LI') {
+        if (lastHoveredItem2 && lastHoveredItem2 !== event.target) {
+            lastHoveredItem2.classList.remove("selected")
+        }
+        lastHoveredItem2 = event.target;
+        lastHoveredItem2.classList.add("selected")
+    }
     category_list3.classList.remove("hidden")
     category_list3.classList.add("block")
 })
@@ -1738,43 +1761,6 @@ category_list4.addEventListener("mouseover", () => {
 })
 
 // first block
-// category_list3.addEventListener('change', function (event) {
-//     const checkbox = event.target;
-//     const listItem = checkbox.parentNode;
-//     const itemName = listItem.textContent.trim();
-
-//     if (checkbox.checked) {
-//         createTag(itemName, checkbox);
-//     } else {
-//         removeTag(itemName);
-//     }
-// });
-
-// // Функция для создания тега
-// function createTag(itemName, checkbox) {
-//     const tag = document.createElement('div');
-//     tag.classList.add('tag');
-//     tag.classList.add('cityStyle');
-//     tag.innerHTML = itemName + '<img class="cursor-pointer w-7 border-white border-l pl-2" src="/assets/constructor/delete.svg"></img>';
-//     tag.querySelector('img').addEventListener('click', function () {
-//         const clickedCheckbox = checkbox;
-//         const clickedTag = event.target.parentNode;
-//         clickedCheckbox.checked = false;
-//         tagContainer.removeChild(clickedTag);
-//     });
-//     tagContainer.appendChild(tag);
-// }
-
-// // Функция для удаления тега
-// function removeTag(itemName) {
-//     const tags = tagContainer.getElementsByClassName('tag');
-//     Array.from(tags).forEach(function (tag) {
-//         if (tag.textContent.includes(itemName)) {
-//             tagContainer.removeChild(tag);
-//         }
-//     });
-// }
-
 category_list3.addEventListener('change', function (event) {
     const checkbox = event.target;
     const listItem = checkbox.parentNode;
@@ -1789,8 +1775,10 @@ category_list3.addEventListener('change', function (event) {
     if (checkbox.checked) {
         const countSelectedOptions = category_list2Checkboxes.length;
         createTag(itemName, checkbox, countSelectedOptions);
+        listItem.classList.add('selected');
     } else {
         removeTag(itemName);
+        listItem.classList.remove('selected');
     }
 });
 
@@ -1822,8 +1810,10 @@ function createTag(itemName, checkbox, countSelectedOptions) {
     tag.querySelector('img').addEventListener('click', function () {
         const clickedCheckbox = checkbox;
         const clickedTag = event.target.parentNode;
+        const listItem = checkbox.parentNode;
         clickedCheckbox.checked = false;
         tagContainer.removeChild(clickedTag);
+        listItem.classList.remove('selected');
     });
     tagContainer.appendChild(tag);
 }
