@@ -183,6 +183,9 @@ const text_editor = document.querySelector("#text_editor")
 // Youtube link
 const youtube_link = document.querySelector("#youtube_link")
 const checkYoutube = document.querySelector("#checkYoutube")
+const delivary = document.querySelector("#delivary")
+const delivaryBlock = document.querySelector("#delivaryBlock")
+
 
 // Select cities
 const selectInput = document.querySelector('.select-input');
@@ -258,6 +261,14 @@ const dropdowns = document.querySelector('#dropdownList');
 const options = dropdowns.querySelectorAll('li');
 const spanOfBtn = document.querySelector("#spanOfBtn")
 
+const alertFile = document.querySelector("#alertFile")
+const alertClose = document.querySelector("#alertClose")
+const agree = document.querySelector("#agree")
+const notAgree = document.querySelector("#notAgree")
+const openMyBlocks = document.querySelector("#openMyBlocks")
+const myBlocks = document.querySelector("#myBlocks")
+
+
 button.addEventListener('click', function () {
     dropdowns.classList.toggle('hidden');
 });
@@ -270,6 +281,10 @@ dropdowns.addEventListener('click', function (event) {
     }
 });
 
+
+openMyBlocks.addEventListener("click", () => {
+    myBlocks.classList.toggle("hidden")
+})
 
 //more photo
 photoOne.addEventListener('change', function (event) {
@@ -365,6 +380,17 @@ checkYoutube.addEventListener("change", () => {
     } else {
         youtube_link.classList.remove("block")
         youtube_link.classList.add("hidden")
+    }
+})
+
+// delivary
+delivary.addEventListener("change", () => {
+    if (delivary.checked) {
+        delivaryBlock.classList.remove("hidden")
+        delivaryBlock.classList.add("block")
+    } else {
+        delivaryBlock.classList.remove("block")
+        delivaryBlock.classList.add("hidden")
     }
 })
 
@@ -721,37 +747,58 @@ document.getElementById('uploadImage').addEventListener('change', function (even
     var file = event.target.files[0];
     var image = document.getElementById('cropperImage');
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        image.src = e.target.result;
-
-        var cropper = new Cropper(image, {
-            aspectRatio: 1,
-            viewMode: 1,
-            autoCropArea: 0.8
-        });
-
-        document.getElementById('cropModal').style.display = 'block';
-
-        document.getElementById('cropButton').addEventListener('click', function () {
-            var croppedCanvas = cropper.getCroppedCanvas();
-            var croppedImage = croppedCanvas.toDataURL();
-            document.getElementById("file_block").style.display = "none"
-            document.getElementById('cropperResult').style.display = "block"
-            document.getElementById('cropperResult').src = croppedImage;
-            document.getElementById('cropModal').style.display = 'none';
-
-            cropper.destroy();
-        });
-
-        document.getElementById('cancelButton').addEventListener('click', function () {
-            document.getElementById('cropModal').style.display = 'none';
-            cropper.destroy();
-        });
-    };
-
     if (file) {
-        reader.readAsDataURL(file);
+        // Проверка размеров изображения
+        var imageDimensions = new Image();
+        imageDimensions.onload = function () {
+            var minWidth = 800;
+            var minHeight = 600;
+
+            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
+                alertFile.classList.add("block");
+                alertFile.classList.remove("hidden");
+                event.target.value = null;
+                return;
+            }
+
+            // Продолжение кода обработки изображения
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                image.src = e.target.result;
+
+                var cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 0,
+                    autoCropArea: 0.5,
+                    dragMode: "none",
+                    cropBoxResizable: true,
+                    background: false,
+                    zoomable: false,
+                    guides: false
+                });
+
+                document.getElementById('cropModal').style.display = 'block';
+
+                document.getElementById('cropButton').addEventListener('click', function () {
+                    var croppedCanvas = cropper.getCroppedCanvas();
+                    var croppedImage = croppedCanvas.toDataURL();
+                    document.getElementById("file_block").style.display = "none"
+                    document.getElementById('cropperResult').style.display = "block"
+                    document.getElementById('cropperResult').src = croppedImage;
+                    document.getElementById('cropModal').style.display = 'none';
+
+                    cropper.destroy();
+                });
+
+                document.getElementById('cancelButton').addEventListener('click', function () {
+                    document.getElementById('cropModal').style.display = 'none';
+                    cropper.destroy();
+                });
+            };
+
+            reader.readAsDataURL(file);
+        };
+        imageDimensions.src = URL.createObjectURL(file);
     }
 });
 
@@ -760,37 +807,58 @@ document.getElementById('uploadImage2').addEventListener('change', function (eve
     var file = event.target.files[0];
     var image = document.getElementById('cropperImage2');
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        image.src = e.target.result;
-
-        var cropper = new Cropper(image, {
-            aspectRatio: 1,
-            viewMode: 1,
-            autoCropArea: 0.8
-        });
-
-        document.getElementById('cropModal2').style.display = 'block';
-
-        document.getElementById('cropButton2').addEventListener('click', function () {
-            var croppedCanvas = cropper.getCroppedCanvas();
-            var croppedImage = croppedCanvas.toDataURL();
-            document.getElementById("file_block2").style.display = "none"
-            document.getElementById('cropperResult2').style.display = "block"
-            document.getElementById('cropperResult2').src = croppedImage;
-            document.getElementById('cropModal2').style.display = 'none';
-
-            cropper.destroy();
-        });
-
-        document.getElementById('cancelButton2').addEventListener('click', function () {
-            document.getElementById('cropModal2').style.display = 'none';
-            cropper.destroy();
-        });
-    };
-
     if (file) {
-        reader.readAsDataURL(file);
+        // Проверка размеров изображения
+        var imageDimensions = new Image();
+        imageDimensions.onload = function () {
+            var minWidth = 800;
+            var minHeight = 600;
+
+            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
+                alertFile.classList.add("block");
+                alertFile.classList.remove("hidden");
+                event.target.value = null;
+                return;
+            }
+
+            // Продолжение кода обработки изображения
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                image.src = e.target.result;
+
+                var cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 0,
+                    autoCropArea: 0.5,
+                    dragMode: "none",
+                    cropBoxResizable: true,
+                    background: false,
+                    zoomable: false,
+                    guides: false
+                });
+
+                document.getElementById('cropModal2').style.display = 'block';
+
+                document.getElementById('cropButton2').addEventListener('click', function () {
+                    var croppedCanvas = cropper.getCroppedCanvas();
+                    var croppedImage = croppedCanvas.toDataURL();
+                    document.getElementById("file_block2").style.display = "none"
+                    document.getElementById('cropperResult2').style.display = "block"
+                    document.getElementById('cropperResult2').src = croppedImage;
+                    document.getElementById('cropModal2').style.display = 'none';
+
+                    cropper.destroy();
+                });
+
+                document.getElementById('cancelButton2').addEventListener('click', function () {
+                    document.getElementById('cropModal2').style.display = 'none';
+                    cropper.destroy();
+                });
+            };
+
+            reader.readAsDataURL(file);
+        };
+        imageDimensions.src = URL.createObjectURL(file);
     }
 });
 
@@ -806,44 +874,69 @@ document.getElementById('uploadImage3').addEventListener('change', function (eve
     var file = event.target.files[0];
     var image = document.getElementById('cropperImage3');
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        image.src = e.target.result;
-
-        var cropper = new Cropper(image, {
-            aspectRatio: 1,
-            viewMode: 1,
-            autoCropArea: 0.8
-        });
-
-        document.getElementById('cropModal3').style.display = 'block';
-
-        document.getElementById('cropButton3').addEventListener('click', function () {
-            var croppedCanvas = cropper.getCroppedCanvas();
-            var croppedImage = croppedCanvas.toDataURL();
-            document.getElementById("file_block3").style.display = "none"
-            document.getElementById('cropperResult3').style.display = "block"
-            document.getElementById('cropperResult3').src = croppedImage;
-            document.getElementById('cropModal3').style.display = 'none';
-
-            cropper.destroy();
-        });
-
-        document.getElementById('cancelButton3').addEventListener('click', function () {
-            document.getElementById('cropModal3').style.display = 'none';
-            cropper.destroy();
-        });
-    };
-
     if (file) {
-        reader.readAsDataURL(file);
+        // Проверка размеров изображения
+        var imageDimensions = new Image();
+        imageDimensions.onload = function () {
+            var minWidth = 800;
+            var minHeight = 600;
+
+            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
+                alertFile.classList.add("block");
+                alertFile.classList.remove("hidden");
+                event.target.value = null;
+                return;
+            }
+
+            // Продолжение кода обработки изображения
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                image.src = e.target.result;
+
+                var cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 0,
+                    autoCropArea: 0.5,
+                    dragMode: "none",
+                    cropBoxResizable: true,
+                    background: false,
+                    zoomable: false,
+                    guides: false
+                });
+
+                document.getElementById('cropModal3').style.display = 'block';
+
+                document.getElementById('cropButton3').addEventListener('click', function () {
+                    var croppedCanvas = cropper.getCroppedCanvas();
+                    var croppedImage = croppedCanvas.toDataURL();
+                    document.getElementById("file_block3").style.display = "none"
+                    document.getElementById('cropperResult3').style.display = "block"
+                    document.getElementById('cropperResult3').src = croppedImage;
+                    document.getElementById('cropModal3').style.display = 'none';
+
+                    cropper.destroy();
+                });
+
+                document.getElementById('cancelButton3').addEventListener('click', function () {
+                    document.getElementById('cropModal3').style.display = 'none';
+                    cropper.destroy();
+                });
+            };
+
+            reader.readAsDataURL(file);
+        };
+        imageDimensions.src = URL.createObjectURL(file);
     }
 });
 
+alertClose.addEventListener("click", () => {
+    alertFile.classList.add("hidden");
+    alertFile.classList.remove("block");
+})
 
 // Редакторы для форматирования текста
 let quill = new Quill('#editor', {
-    placeholder: "Mohito (Мохито) – польский бренд модной одежды. Марка разрабатывает, отшивает и выпускает на рынки одежду для элегантных и грациозных женщин, обладающих большой внутренней силой и энергией. Стильная и в тоже время романтичная одежда предназначается работницам офиса и любителям активного отдыха, тем, в ком жив бунтарский дух, кто легко и грациозно ломает устоявшиеся стереотипы привычного и скучного дресс-кода, очерченного для деловых людей. Одежда этой фирмы всегда на гребне волны современной моды. А высокое качество и низкие цены являются очень приятным бонусом при общении с этой компанией модной одежды.",
+    placeholder: "—Сделай покупки на сумму свыше 60 000 рублей и используй промокод что бы получить скидку 10 000 рублей \n —При предъявлении промокода \n Вы вольны сами указывать дополнительные условия.Если вы укажите код для получения скидки, то условие 'При предъявлении промокода' будет отображаться в акции автоматически.",
     modules: {
         toolbar: [
             [{ 'header': [1, 2, 3, false] }],  // Заголовки
@@ -861,7 +954,7 @@ let quill = new Quill('#editor', {
 
 
 let quill2 = new Quill('#editor2', {
-    placeholder: "Mohito (Мохито) – польский бренд модной одежды. Марка разрабатывает, отшивает и выпускает на рынки одежду для элегантных и грациозных женщин, обладающих большой внутренней силой и энергией. Стильная и в тоже время романтичная одежда предназначается работницам офиса и любителям активного отдыха, тем, в ком жив бунтарский дух, кто легко и грациозно ломает устоявшиеся стереотипы привычного и скучного дресс-кода, очерченного для деловых людей. Одежда этой фирмы всегда на гребне волны современной моды. А высокое качество и низкие цены являются очень приятным бонусом при общении с этой компанией модной одежды.",
+    placeholder: "—Сделай покупки на сумму свыше 60 000 рублей и используй промокод что бы получить скидку 10 000 рублей \n —При предъявлении промокода \n Вы вольны сами указывать дополнительные условия.Если вы укажите код для получения скидки, то условие 'При предъявлении промокода' будет отображаться в акции автоматически.",
     modules: {
         toolbar: [
             [{ 'header': [1, 2, 3, false] }],  // Заголовки
@@ -1882,10 +1975,15 @@ saleValue.addEventListener("change", () => {
     if (saleValue.checked) {
         hiddenText.classList.remove("hidden")
         hiddenText.classList.add("inline-block")
+        notAgree.classList.add("text_opac")
+        agree.classList.remove("text_opac")
     }
     if (!saleValue.checked) {
         hiddenText.classList.remove("inline-block")
         hiddenText.classList.add("hidden")
+
+        agree.classList.add("text_opac")
+        notAgree.classList.remove("text_opac")
     }
 })
 
@@ -1911,6 +2009,10 @@ timeValueCheck.addEventListener("change", () => {
 
 // more img 
 moreImg.addEventListener("click", () => {
+    svgImg.classList.toggle("rotate-180")
+    moreImgShow.classList.toggle("hidden")
+})
+svgImg.addEventListener("click", () => {
     svgImg.classList.toggle("rotate-180")
     moreImgShow.classList.toggle("hidden")
 })
