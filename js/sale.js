@@ -29,15 +29,19 @@ const galBlock = document.querySelector("#galBlock")
 const border_line = document.querySelector("#border_line")
 const galUp = document.querySelector("#galUp")
 
-showGalBlock.addEventListener("click", () => {
+
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});
+
+// конец
+showGalBlock?.addEventListener("click", () => {
     galBlock.classList.toggle("hidden")
     border_line.classList.toggle("hidden")
     galUp.classList.toggle("rotate-180")
 })
 
-Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-});
 
 gal1.addEventListener("mouseenter", () => {
     galD1.classList.remove("hidden")

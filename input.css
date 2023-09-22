@@ -208,6 +208,10 @@ a {
     display: flex;
 }
 
+.disc_rotate {
+    transform: rotate(6deg);
+}
+
 /* icons hover */
 .mains:hover #icons1 {
     display: block;
@@ -656,6 +660,7 @@ a {
         display: none !important;
     }
 }
+
 
 @media(max-width:752px) {
     .main_card {
@@ -1741,6 +1746,10 @@ a {
         display: block !important;
     }
 
+    .salesLinkHidden {
+        display: none !important;
+    }
+
     .salesLink2 {
         display: none;
     }
@@ -1780,5 +1789,11 @@ a {
 
     .nameTextNUmber {
         font-size: 28px !important;
+    }
+}
+
+@media(max-width:700px) {
+    .morePhotos {
+        position: static !important;
     }
 }
