@@ -1379,5 +1379,116 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="/js/dropdown.js"></script>
     <script src="/js/sale.js"></script>
+    <script>
+const promoHidden = document.getElementById("promoHidden")
+const openThePromo = document.getElementById("openThePromo")
+const promoCopy = document.getElementById("promoCopy")
+const closeThePromo = document.getElementById("closeThePromo")
+const copyBtn = document.getElementById("copyBtn")
+const copyJust = document.getElementById("copyJust")
+const promoCode = document.getElementById("promoCode")
+const copyYes = document.getElementById("copyYes")
+
+const promoHiddenMob = document.getElementById("promoHiddenMob")
+const openThePromoMob = document.getElementById("openThePromoMob")
+const promoCopyMob = document.getElementById("promoCopyMob")
+const closeThePromoMob = document.getElementById("closeThePromoMob")
+const copyBtnMob = document.getElementById("copyBtnMob")
+const copyJustMob = document.getElementById("copyJustMob")
+const promoCodeMob = document.getElementById("promoCodeMob")
+const copyYesMob = document.getElementById("copyYesMob")
+openThePromo.addEventListener("click", () => {
+    promoHidden.classList.add("hidden")
+    promoCopy.classList.remove("hidden")
+})
+
+closeThePromo.addEventListener("click", () => {
+    promoHidden.classList.remove("hidden")
+    promoCopy.classList.add("hidden")
+})
+
+copyJust.addEventListener('click', function () {
+    const textToCopy = promoCode.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    clearCopy()
+});
+
+copyBtn.addEventListener('click', function () {
+    const textToCopy = promoCode.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    clearCopy()
+    window.location.href = '/index.html';
+});
+
+function clearCopy() {
+    copyYes.classList.remove("hidden")
+    setTimeout(() => { copyYes.classList.add("hidden") }, 500)
+}
+
+// mobile version
+openThePromoMob.addEventListener("click", () => {
+    promoHiddenMob.classList.add("salesLinkHidden")
+    promoCopyMob.classList.remove("hidden")
+})
+
+closeThePromoMob.addEventListener("click", () => {
+    promoHiddenMob.classList.remove("salesLinkHidden")
+    promoCopyMob.classList.add("hidden")
+})
+
+copyJustMob.addEventListener('click', function () {
+    const textToCopy = promoCodeMob.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    clearCopys()
+});
+
+copyBtnMob.addEventListener('click', function () {
+    const textToCopy = promoCodeMob.innerText;
+
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    clearCopys()
+    window.location.href = '/index.html';
+});
+
+function clearCopys() {
+    copyYesMob.classList.remove("hidden")
+    setTimeout(() => { copyYesMob.classList.add("hidden") }, 500)
+}
+    </script>
 </body>
 </html>
