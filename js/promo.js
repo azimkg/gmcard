@@ -748,59 +748,55 @@ document.getElementById('uploadImage').addEventListener('change', function (even
     var image = document.getElementById('cropperImage');
 
     if (file) {
-        // Проверка размеров изображения
-        var imageDimensions = new Image();
-        imageDimensions.onload = function () {
-            var minWidth = 800;
-            var minHeight = 600;
+        // Проверка размера файла (не больше 10 МБ)
+        var maxSize = 10 * 1024 * 1024; // 10 МБ в байтах
 
-            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
-                alertFile.classList.add("block");
-                alertFile.classList.remove("hidden");
-                event.target.value = null;
-                return;
-            }
+        if (file.size > maxSize) {
+            alertFile.classList.add("block");
+            alertFile.classList.remove("hidden");
+            event.target.value = null;
+            return;
+        }
 
-            // Продолжение кода обработки изображения
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                image.src = e.target.result;
+        // Продолжение кода обработки изображения
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            image.src = e.target.result;
 
-                var cropper = new Cropper(image, {
-                    aspectRatio: 1,
-                    viewMode: 0,
-                    autoCropArea: 0.5,
-                    dragMode: "none",
-                    cropBoxResizable: true,
-                    background: false,
-                    zoomable: false,
-                    guides: false
-                });
+            var cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 0,
+                autoCropArea: 0.5,
+                dragMode: "none",
+                cropBoxResizable: true,
+                background: false,
+                zoomable: false,
+                guides: false
+            });
 
-                document.getElementById('cropModal').style.display = 'block';
+            document.getElementById('cropModal').style.display = 'block';
 
-                document.getElementById('cropButton').addEventListener('click', function () {
-                    var croppedCanvas = cropper.getCroppedCanvas();
-                    var croppedImage = croppedCanvas.toDataURL();
-                    document.getElementById("file_block").style.display = "none"
-                    document.getElementById('cropperResult').style.display = "block"
-                    document.getElementById('cropperResult').src = croppedImage;
-                    document.getElementById('cropModal').style.display = 'none';
+            document.getElementById('cropButton').addEventListener('click', function () {
+                var croppedCanvas = cropper.getCroppedCanvas();
+                var croppedImage = croppedCanvas.toDataURL();
+                document.getElementById("file_block").style.display = "none";
+                document.getElementById('cropperResult').style.display = "block";
+                document.getElementById('cropperResult').src = croppedImage;
+                document.getElementById('cropModal').style.display = 'none';
 
-                    cropper.destroy();
-                });
+                cropper.destroy();
+            });
 
-                document.getElementById('cancelButton').addEventListener('click', function () {
-                    document.getElementById('cropModal').style.display = 'none';
-                    cropper.destroy();
-                });
-            };
-
-            reader.readAsDataURL(file);
+            document.getElementById('cancelButton').addEventListener('click', function () {
+                document.getElementById('cropModal').style.display = 'none';
+                cropper.destroy();
+            });
         };
-        imageDimensions.src = URL.createObjectURL(file);
+
+        reader.readAsDataURL(file);
     }
 });
+
 
 // Обработчик события выбора файла 2
 document.getElementById('uploadImage2').addEventListener('change', function (event) {
@@ -808,59 +804,55 @@ document.getElementById('uploadImage2').addEventListener('change', function (eve
     var image = document.getElementById('cropperImage2');
 
     if (file) {
-        // Проверка размеров изображения
-        var imageDimensions = new Image();
-        imageDimensions.onload = function () {
-            var minWidth = 800;
-            var minHeight = 600;
+        // Проверка размера файла (не больше 10 МБ)
+        var maxSize = 10 * 1024 * 1024; // 10 МБ в байтах
 
-            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
-                alertFile.classList.add("block");
-                alertFile.classList.remove("hidden");
-                event.target.value = null;
-                return;
-            }
+        if (file.size > maxSize) {
+            alertFile.classList.add("block");
+            alertFile.classList.remove("hidden");
+            event.target.value = null;
+            return;
+        }
 
-            // Продолжение кода обработки изображения
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                image.src = e.target.result;
+        // Продолжение кода обработки изображения
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            image.src = e.target.result;
 
-                var cropper = new Cropper(image, {
-                    aspectRatio: 1,
-                    viewMode: 0,
-                    autoCropArea: 0.5,
-                    dragMode: "none",
-                    cropBoxResizable: true,
-                    background: false,
-                    zoomable: false,
-                    guides: false
-                });
+            var cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 0,
+                autoCropArea: 0.5,
+                dragMode: "none",
+                cropBoxResizable: true,
+                background: false,
+                zoomable: false,
+                guides: false
+            });
 
-                document.getElementById('cropModal2').style.display = 'block';
+            document.getElementById('cropModal2').style.display = 'block';
 
-                document.getElementById('cropButton2').addEventListener('click', function () {
-                    var croppedCanvas = cropper.getCroppedCanvas();
-                    var croppedImage = croppedCanvas.toDataURL();
-                    document.getElementById("file_block2").style.display = "none"
-                    document.getElementById('cropperResult2').style.display = "block"
-                    document.getElementById('cropperResult2').src = croppedImage;
-                    document.getElementById('cropModal2').style.display = 'none';
+            document.getElementById('cropButton2').addEventListener('click', function () {
+                var croppedCanvas = cropper.getCroppedCanvas();
+                var croppedImage = croppedCanvas.toDataURL();
+                document.getElementById("file_block2").style.display = "none";
+                document.getElementById('cropperResult2').style.display = "block";
+                document.getElementById('cropperResult2').src = croppedImage;
+                document.getElementById('cropModal2').style.display = 'none';
 
-                    cropper.destroy();
-                });
+                cropper.destroy();
+            });
 
-                document.getElementById('cancelButton2').addEventListener('click', function () {
-                    document.getElementById('cropModal2').style.display = 'none';
-                    cropper.destroy();
-                });
-            };
-
-            reader.readAsDataURL(file);
+            document.getElementById('cancelButton2').addEventListener('click', function () {
+                document.getElementById('cropModal2').style.display = 'none';
+                cropper.destroy();
+            });
         };
-        imageDimensions.src = URL.createObjectURL(file);
+
+        reader.readAsDataURL(file);
     }
 });
+
 
 // Обработчик события выбора файла 3
 file_uploadPlus.addEventListener("click", () => {
@@ -875,59 +867,55 @@ document.getElementById('uploadImage3').addEventListener('change', function (eve
     var image = document.getElementById('cropperImage3');
 
     if (file) {
-        // Проверка размеров изображения
-        var imageDimensions = new Image();
-        imageDimensions.onload = function () {
-            var minWidth = 800;
-            var minHeight = 600;
+        // Проверка размера файла (не больше 10 МБ)
+        var maxSize = 10 * 1024 * 1024; // 10 МБ в байтах
 
-            if (imageDimensions.width < minWidth || imageDimensions.height < minHeight) {
-                alertFile.classList.add("block");
-                alertFile.classList.remove("hidden");
-                event.target.value = null;
-                return;
-            }
+        if (file.size > maxSize) {
+            alertFile.classList.add("block");
+            alertFile.classList.remove("hidden");
+            event.target.value = null;
+            return;
+        }
 
-            // Продолжение кода обработки изображения
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                image.src = e.target.result;
+        // Продолжение кода обработки изображения
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            image.src = e.target.result;
 
-                var cropper = new Cropper(image, {
-                    aspectRatio: 1,
-                    viewMode: 0,
-                    autoCropArea: 0.5,
-                    dragMode: "none",
-                    cropBoxResizable: true,
-                    background: false,
-                    zoomable: false,
-                    guides: false
-                });
+            var cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 0,
+                autoCropArea: 0.5,
+                dragMode: "none",
+                cropBoxResizable: true,
+                background: false,
+                zoomable: false,
+                guides: false
+            });
 
-                document.getElementById('cropModal3').style.display = 'block';
+            document.getElementById('cropModal3').style.display = 'block';
 
-                document.getElementById('cropButton3').addEventListener('click', function () {
-                    var croppedCanvas = cropper.getCroppedCanvas();
-                    var croppedImage = croppedCanvas.toDataURL();
-                    document.getElementById("file_block3").style.display = "none"
-                    document.getElementById('cropperResult3').style.display = "block"
-                    document.getElementById('cropperResult3').src = croppedImage;
-                    document.getElementById('cropModal3').style.display = 'none';
+            document.getElementById('cropButton3').addEventListener('click', function () {
+                var croppedCanvas = cropper.getCroppedCanvas();
+                var croppedImage = croppedCanvas.toDataURL();
+                document.getElementById("file_block3").style.display = "none";
+                document.getElementById('cropperResult3').style.display = "block";
+                document.getElementById('cropperResult3').src = croppedImage;
+                document.getElementById('cropModal3').style.display = 'none';
 
-                    cropper.destroy();
-                });
+                cropper.destroy();
+            });
 
-                document.getElementById('cancelButton3').addEventListener('click', function () {
-                    document.getElementById('cropModal3').style.display = 'none';
-                    cropper.destroy();
-                });
-            };
-
-            reader.readAsDataURL(file);
+            document.getElementById('cancelButton3').addEventListener('click', function () {
+                document.getElementById('cropModal3').style.display = 'none';
+                cropper.destroy();
+            });
         };
-        imageDimensions.src = URL.createObjectURL(file);
+
+        reader.readAsDataURL(file);
     }
 });
+
 
 alertClose.addEventListener("click", () => {
     alertFile.classList.add("hidden");
