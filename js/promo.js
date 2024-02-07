@@ -923,40 +923,24 @@ alertClose.addEventListener("click", () => {
 })
 
 // Редакторы для форматирования текста
-let quill = new Quill('#editor', {
-    placeholder: "—Сделай покупки на сумму свыше 60 000 рублей и используй промокод что бы получить скидку 10 000 рублей \n —При предъявлении промокода \n Вы вольны сами указывать дополнительные условия.Если вы укажите код для получения скидки, то условие 'При предъявлении промокода' будет отображаться в акции автоматически.",
-    modules: {
-        toolbar: [
-            [{ 'header': [1, 2, 3, false] }],  // Заголовки
-            ['bold', 'italic', 'underline'],   // Жирный, курсив, подчеркнутый
-            ['link', 'image', 'video']          // Ссылки, изображения, видео
-        ]
-    },
-    formats: {
-        'default': {
-            'font-size': '16px'  // Размер текста по умолчанию
-        }
-    },
-    theme: 'snow'  // Тема "Snow" для стилизации
-});
+ClassicEditor
+    .create(document.querySelector('#editor'))
+    .then(editor => {
+        console.log('Editor was initialized', editor);
+    })
+    .catch(error => {
+        console.error('There was a problem initializing the editor:', error);
+    });
 
 
-let quill2 = new Quill('#editor2', {
-    placeholder: "—Сделай покупки на сумму свыше 60 000 рублей и используй промокод что бы получить скидку 10 000 рублей \n —При предъявлении промокода \n Вы вольны сами указывать дополнительные условия.Если вы укажите код для получения скидки, то условие 'При предъявлении промокода' будет отображаться в акции автоматически.",
-    modules: {
-        toolbar: [
-            [{ 'header': [1, 2, 3, false] }],  // Заголовки
-            ['bold', 'italic', 'underline'],   // Жирный, курсив, подчеркнутый
-            ['link', 'image', 'video']          // Ссылки, изображения, видео
-        ]
-    },
-    formats: {
-        'default': {
-            'font-size': '16px'  // Размер текста по умолчанию
-        }
-    },
-    theme: 'snow'  // Тема "Snow" для стилизации
-});
+ClassicEditor
+    .create(document.querySelector('#editor2'))
+    .then(editor => {
+        console.log('Editor was initialized', editor);
+    })
+    .catch(error => {
+        console.error('There was a problem initializing the editor:', error);
+    });
 
 
 // all social
@@ -2003,4 +1987,15 @@ moreImg.addEventListener("click", () => {
 svgImg.addEventListener("click", () => {
     svgImg.classList.toggle("rotate-180")
     moreImgShow.classList.toggle("hidden")
+})
+
+
+document.getElementById("MOre_examp").addEventListener("click", () => {
+    document.getElementById("modal_examp").classList.remove("hidden")
+    document.getElementById("modal_examp").classList.add("flex")
+})
+
+document.getElementById("close_morexamp").addEventListener("click", () => {
+    document.getElementById("modal_examp").classList.add("hidden")
+    document.getElementById("modal_examp").classList.remove("flex")
 })

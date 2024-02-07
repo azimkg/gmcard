@@ -12,7 +12,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.0/classic/ckeditor.js"></script>
+    <style>
+        .ck-editor__editable {
+            min-height: 200px;
+        }
+    </style>
 </head>
 <body>
     <header id="header" class="h-[60px] w-full bg-[#152041] flex items-center">
@@ -1040,12 +1045,13 @@
                     </div>
                     <div class="flex bg-white p-4 md:p-8 mt-8 rounded-2xl flex-col w-full" id="vosmoi">
                         <h3 class="font-bold mb-4">Расскажите немного о себе или вашей компании</h3>
-                        <div id="editor" class="w-full min-h-[200px]"></div>
+                        <textarea id="editor" class="w-full h-[200px]"></textarea>
                         <div class="my-6">
                             <div class="h-[1px] w-full bg-black/30"></div>
                             <div class="flex justify-between items-center my-4">
                                 <p class="mr-10 text-black/50 all_text"><strong class="text-black text-base">Допополнительные условия.</strong>
                                     Если по вашей акции есть какие-то дополнительные условия, о которых вы считаете нужным заявить - вы можете сделать это ниже. Если никаких дополнительных условий нет, то оставьте поле пустым.
+                                    <span id="MOre_examp" class="text-[#2578cf] ml-3 hover:underline cursor-pointer">Подробнее</span>
                                 </p>
                                 <label class="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" class="sr-only peer" id="editor_vis">
@@ -1055,7 +1061,18 @@
                         </div>
                         <div class="mb-4 hidden" id="text_editor">
                             <div class="h-[1px] w-full bg-black/30"></div>
-                            <div id="editor2" class="w-full min-h-[200px]"></div>
+                            <textarea id="editor2" class="w-full min-h-[200px]"></textarea>
+                        </div>
+                    </div>
+                    <div id="modal_examp" class="fixed bg-black/50 z-50 top-0 left-0 w-full h-full hidden items-center justify-center">
+                        <div class="p-4 bg-white rounded-md border-4 border-[#2578cf] w-[350px] relative">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="font-semibold text-xl">Пример вопросов</h2>
+                                <p>lorem ipsum</p>
+                            </div>
+                            <svg id="close_morexamp" xmlns="http://www.w3.org/2000/svg" class="absolute top-4 right-4 w-6 h-6 hover:bg-black/50 hover:text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
                         </div>
                     </div>
                     <div class="flex bg-white p-4 md:p-8 mt-8 rounded-2xl flex-col" id="devyatyi">
@@ -2307,7 +2324,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="/js/dropdown.js"></script>
     <script src="/js/promo.js   "></script>
 </body>
