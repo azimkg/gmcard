@@ -124,6 +124,10 @@ a {
     column-gap: 3px;
 }
 
+.containers {
+    width: 1140px
+}
+
 .my-class:hover span {
     color: #CBCE3D;
 }
