@@ -135,6 +135,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('mobil_add').classList.remove('hidden')
     })
 
+    document.getElementById('delMob2').addEventListener('click', () => {
+        document.getElementById('mobaddblock').classList.remove('hidden')
+        document.getElementById('mob_addBlock').classList.add('hidden')
+        document.getElementById('mobil_add').classList.add('hidden')
+    })
+
     // Email
     const emailselect = document.getElementById("emial");
     const emailselected = document.getElementById("email_select");
@@ -190,6 +196,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('mobaddblock2').classList.add('hidden')
         document.getElementById('addBlock_email').classList.remove('hidden')
         document.getElementById('email2').classList.remove('hidden')
+    })
+
+    document.getElementById('delemail2').addEventListener('click', () => {
+        document.getElementById('mobaddblock2').classList.remove('hidden')
+        document.getElementById('addBlock_email').classList.add('hidden')
+        document.getElementById('email2').classList.add('hidden')
     })
 
     // Site
@@ -248,6 +260,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('addBlock_site').classList.remove('hidden')
     })
 
+    document.getElementById('delsite2').addEventListener('click', () => {
+        document.getElementById('mobaddsite2').classList.remove('hidden')
+        document.getElementById('addBlock_site').classList.add('hidden')
+    })
+
     // Социальная сеть
     const servisselect = document.getElementById("servis");
     const servisselected = document.getElementById("servis_select");
@@ -304,6 +321,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('addBlock_servis').classList.remove('hidden')
     })
 
+    document.getElementById('delsoc2').addEventListener('click', () => {
+        document.getElementById('mobaddservis2').classList.remove('hidden')
+        document.getElementById('addBlock_servis').classList.add('hidden')
+    })
+
     // закрытие и открытие модального окна
     document.getElementById('change_btn').addEventListener('click', () => {
         document.getElementById('modalChange').classList.toggle('hidden')
@@ -352,4 +374,17 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleRepeatPassword.addEventListener('click', function () {
         togglePasswordVisibility(repeatPasswordInput, toggleRepeatPassword);
     });
+
+    // services
+    document.getElementById('googleadd').addEventListener('click', () => {
+        document.getElementById('googleadd').classList.add('hidden')
+        document.getElementById('googlearemove').classList.remove('hidden')
+        document.getElementById('servisGoogle').classList.remove('hidden')
+    })
+
+    document.getElementById('googlearemove').addEventListener('click', () => {
+        document.getElementById('googleadd').classList.remove('hidden')
+        document.getElementById('googlearemove').classList.add('hidden')
+        document.getElementById('servisGoogle').classList.add('hidden')
+    })
 });

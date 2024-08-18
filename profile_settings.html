@@ -622,13 +622,33 @@
 						</div>
 						<div
 							id="passBlock"
-							class="w-full flex">
+							class="w-full flex flex-col gap-3">
+							<div
+								id=""
+								class="flex flex-col w-[500px] pr-10 gap-1 relative">
+								<label
+									for="old-password"
+									class="text-sm font-medium"
+									>Текущий пароль</label
+								>
+								<input
+									type="password"
+									class="h-[50px] px-4 rounded-md outline-none border border-black/20"
+									name="new-password"
+									placeholder="Придумайте новый пароль"
+									id="old-password" />
+								<img
+									id="toggle-new-password"
+									class="w-6 absolute top-10 right-12 cursor-pointer"
+									src="/assets/icons/pass.svg"
+									alt="Показать пароль" />
+							</div>
 							<div
 								id="password-container"
-								class="flex flex-col w-full pr-10 gap-1 relative">
+								class="flex flex-col w-[500px] pr-10 gap-1 relative">
 								<label
 									for="new-password"
-									class="font-medium"
+									class="text-sm font-medium"
 									>Новый пароль</label
 								>
 								<input
@@ -645,10 +665,10 @@
 							</div>
 							<div
 								id="repeat-password-container"
-								class="flex flex-col w-full pr-10 gap-1 relative">
+								class="flex flex-col w-[500px] pr-10 gap-1 relative">
 								<label
 									for="repeat-password"
-									class="font-medium"
+									class="text-sm font-medium"
 									>Повторите пароль</label
 								>
 								<input
@@ -703,6 +723,71 @@
 										</p>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+					<div class="px-8 py-4 border-b">
+						<h2 class="text-3xl font-medium">
+							Настроить ключницу
+						</h2>
+					</div>
+					<p class="px-8 py-2 text-sm">
+						Привязка учетных записей других сервисов к
+						аккаунту, позволит вам входить на все
+						проекты GM в один клик.
+					</p>
+					<div
+						class="px-8 pt-2 pb-8 flex items-start flex-col gap-2 h-full">
+						<div class="flex flex-col gap-4 w-full">
+							<div
+								class="w-full p-6 bg-black/5 rounded-md flex flex-col gap-2">
+								<div
+									class="flex justify-between items-center">
+									<p class="font-medium text-lg">Google</p>
+									<button
+										id="googleadd"
+										class="px-8 rounded-md h-[40px] bg-[#0066CB] text-white font-medium hover:opacity-90 ">
+										Привязать
+									</button>
+									<button
+										id="googlearemove"
+										class="px-8 rounded-md h-[40px] border border-[#0066CB] text-[#0066CB] bg-white font-medium hover:opacity-90 hidden">
+										Отключить
+									</button>
+								</div>
+								<p
+									id="servisGoogle"
+									class="px-6 hidden">
+									Сервис отклонен
+								</p>
+							</div>
+							<div
+								class="w-full p-6 bg-black/5 rounded-md flex justify-between items-center">
+								<p class="font-medium text-lg">Youtube</p>
+								<button
+									class="px-8 rounded-md h-[40px] bg-[#0066CB] text-white font-medium hover:opacity-90">
+									Привязать
+								</button>
+							</div>
+							<div
+								class="w-full p-6 bg-black/5 rounded-md flex justify-between items-center">
+								<p class="font-medium text-lg">
+									VKontakte
+								</p>
+								<button
+									class="px-8 rounded-md h-[40px] bg-[#0066CB] text-white font-medium hover:opacity-90">
+									Привязать
+								</button>
+							</div>
+							<div
+								class="w-full p-6 bg-black/5 rounded-md flex justify-between items-center">
+								<p class="font-medium text-lg">
+									Facebook
+								</p>
+								<button
+									class="px-8 rounded-md h-[40px] bg-[#0066CB] text-white font-medium hover:opacity-90">
+									Привязать
+								</button>
 							</div>
 						</div>
 					</div>
@@ -994,33 +1079,33 @@
 		<div
 			id="modalChange"
 			class="fixed w-full h-full left-0 top-0 bg-black/50 z-50 flex justify-center items-center py-5 overflow-hidden hidden">
+			<button
+				id="closeModal"
+				class="h-[40px] w-[40px] text-lg rounded-md hover:bg-white/5 flex items-center justify-center absolute top-4 right-4">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 text-white">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M6 18 18 6M6 6l12 12" />
+				</svg>
+			</button>
 			<div
-				class="w-full h-full flex  justify-center rounded-md box-border ">
+				class="w-full h-full flex  justify-center rounded-md box-border">
 				<div
-					class="bg-white rounded-md overflow-y-scroll scrolln">
+					class="bg-white rounded-xl  relative flex flex-col">
 					<div
-						class="p-8 w-[1140px] bg-white shadow-xl ">
+						class="p-6 w-[1140px] bg-white relative overflow-y-scroll scrolln">
 						<div
 							class="flex justify-between pb-4 mb-4 items-end border-b">
 							<h2 class="text-2xl ">
 								Редактировать данные
 							</h2>
-							<button
-								id="closeModal"
-								class="h-[40px] w-[40px] text-lg rounded-md hover:bg-black/5 flex items-center justify-center">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									class="w-6 ">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M6 18 18 6M6 6l12 12" />
-								</svg>
-							</button>
 						</div>
 						<div class="w-full flex items-start mb-10">
 							<div class="w-1/2 flex flex-col gap-4">
@@ -1046,6 +1131,21 @@
 								</div>
 							</div>
 							<div class="w-1/2 flex flex-col gap-4">
+								<div
+									class="flex flex-col w-full pr-10 gap-1">
+									<label for=""
+										>Отчество
+										<span class="text-black/40 text-xs">
+											*необязательное поле</span
+										></label
+									>
+									<input
+										type="text"
+										class="h-[50px] px-4 rounded-md outline-none border border-black/20"
+										name=""
+										placeholder="Отчество"
+										id="" />
+								</div>
 								<div
 									class="flex flex-col w-full pr-10 gap-1">
 									<label for="">Возраст</label>
@@ -1174,7 +1274,7 @@
 									</div>
 								</div>
 								<div
-									class="flex flex-col w-full pr-10 gap-1">
+									class="flex flex-col w-full pr-10 gap-1 relative">
 									<label for="">Тип</label>
 									<div
 										id="mobil"
@@ -1218,7 +1318,7 @@
 								</div>
 								<div
 									id="mob_addBlock"
-									class="flex flex-col w-full pr-10 gap-1 hidden">
+									class="flex flex-col w-full pr-10 gap-1 hidden relative">
 									<label for="">Тип</label>
 									<div
 										id="mobil2"
@@ -1259,6 +1359,22 @@
 											</div>
 										</div>
 									</div>
+									<button
+										id="delMob2"
+										class="absolute top-10 right-7">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 absolute">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1342,7 +1458,7 @@
 								</div>
 								<div
 									id="addBlock_email"
-									class="flex flex-col w-full pr-10 gap-1 hidden">
+									class="flex flex-col w-full pr-10 gap-1 hidden relative">
 									<label for="">Тип</label>
 									<div
 										id="email2"
@@ -1383,6 +1499,22 @@
 											</div>
 										</div>
 									</div>
+									<button
+										id="delemail2"
+										class="absolute top-10 right-7">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 absolute">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1460,7 +1592,7 @@
 							</div>
 							<div
 								id="addBlock_site"
-								class="w-full flex gap-4">
+								class="w-full flex gap-4 hidden">
 								<div
 									id=""
 									class="flex flex-col w-full pr-10 gap-2 ">
@@ -1474,7 +1606,7 @@
 								</div>
 								<div
 									id=""
-									class="flex flex-col w-full pr-10 gap-2 ">
+									class="flex flex-col w-full pr-10 gap-2 relative">
 									<label for="">Тип</label>
 									<div
 										id="site2"
@@ -1521,6 +1653,22 @@
 										class="h-[50px] px-4 rounded-md outline-none border border-black/20"
 										placeholder="Личный"
 										id="" />
+									<button
+										id="delsite2"
+										class="absolute top-10 right-7">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 absolute">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1530,7 +1678,7 @@
 							<button
 								id="btn_site"
 								class="bg-[#0066CB] h-[40px] px-5 text-white rounded-md">
-								Добавить еще 1 почту
+								Добавить еще 1 сайт
 							</button>
 						</div>
 						<div
@@ -1639,7 +1787,7 @@
 								</div>
 								<div
 									id=""
-									class="flex flex-col w-full pr-10 gap-2 ">
+									class="flex flex-col w-full pr-10 gap-2 relative">
 									<label for="">Ссылка</label>
 									<input
 										type="text"
@@ -1647,6 +1795,22 @@
 										name=""
 										placeholder="Ссылка на соц. сеть"
 										id="" />
+									<button
+										id="delsoc2"
+										class="absolute top-10 right-7">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 absolute">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1656,9 +1820,11 @@
 							<button
 								id="btn_servis"
 								class="bg-[#0066CB] h-[40px] px-5 text-white rounded-md">
-								Добавить еще 1 почту
+								Добавить еще 1 соц. сеть
 							</button>
 						</div>
+					</div>
+					<div class="px-6 p-4 bg-white">
 						<button
 							id="modalSave"
 							class="bg-[#0066CB] h-[50px] px-5 text-white text-lg font-medium rounded-md">
